@@ -1,0 +1,44 @@
+.vistaEspecifica{
+    display: flex;
+    flex-direction: row;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: fit-content;
+}
+
+.specific-Info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: fit-content;
+}
+
+.sinopsis{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: fit-content;
+}
+
+.book-image{
+    height: 60%;
+    width: 100%;
+}
