@@ -1,8 +1,8 @@
 import React from 'react';
-import mensajes from './Images/Mensajes.png';
-import notificaciones from './Images/notificacion.png';
-import logo from './Images/Logo.png';
-import usuario from './Images/usuario-de-perfil.png';
+import mensajes from '../Images/Mensajes.png';
+import notificaciones from '../Images/notificacion.png';
+import logo from '../Images/Logo.png';
+import usuario from '../Images/usuario-de-perfil.png';
 import './Navbar.css';
 
 var navbar = () =>{
