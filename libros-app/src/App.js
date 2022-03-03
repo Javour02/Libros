@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import Navbar from './Navbar';
 import VistaEspecifica from './VistaEspecifica';
 import VentaLibros from './VentaLibros';
+import Navbar from './components/Navbar/Navbar';
+import VistaEspecifica from './components/VistaEspecifica/VistaEspecifica';
+import MainMenu from './components/MainMenu/MainMenu';
+import LoansPage from './components/LoansPage/LoansPage';
 import './App.css';
 
 function App() {
@@ -24,6 +28,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <LoansPage/>
     </div>
   );
 }
