@@ -12,7 +12,6 @@ export class mainMenu extends Component {
             dueDate: "10/07/2022"
         }
     ]
-
     notifications = [
         {
             bookName: "Six of crows",
@@ -32,6 +31,7 @@ export class mainMenu extends Component {
             userAddress: "Cll 22 #10-03"
         }
     ]
+
     render() {
         return (
             <div className="content">
