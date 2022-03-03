@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Navbar from './Navbar';
 import VistaEspecifica from './VistaEspecifica';
+import VentaLibros from './VentaLibros';
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <VistaEspecifica/>
+      <VentaLibros/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
