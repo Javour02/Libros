@@ -1,7 +1,7 @@
 import React from 'react';
-import portada from './Images/Portada.png';
+import portada from '../Images/Portada.png';
 import './VentaLibros.css';
-import usuario from './Images/usuario-de-perfil.png';
+import usuario from '../Images/usuario-de-perfil.png';
 
 const ventaLibros = () =>{
     return(

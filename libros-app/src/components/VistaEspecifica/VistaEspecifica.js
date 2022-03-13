@@ -1,6 +1,6 @@
 import React from 'react';
-import portada from './Images/Portada.png';
-import estrellas from './Images/estrellas.jpg';
+import portada from '../Images/Portada.png';
+import estrellas from '../Images/estrellas.jpg';
 import './VistaEspecifica.css';
 
 var vistaEspecifica = () =>{

@@ -10,7 +10,13 @@ export class mainMenu extends Component {
             bookAuthor: "Leigh Bardugo",
             bookImage: img,
             dueDate: "10/07/2022"
-        }
+        },
+        {
+            bookName: "Six of crows",
+            bookAuthor: "Leigh Bardugo",
+            bookImage: img,
+            dueDate: "10/07/2022"
+        },
     ]
     notifications = [
         {
