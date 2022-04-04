@@ -1,0 +1,83 @@
+.vistaEspecifica{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+
+.estrellas{
+    width: 200px;
+}
+
+.rating{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sinopsis{
+    text-align: justify;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    padding-right: 40px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: fit-content;
+    padding: 10px;
+}
+
+.specific-Info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.comment1{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    text-align:justify;
+    background-color: #c4c4c4;
+}
+
+.Comments{
+    padding: 40px;
+    
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: fit-content;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sinopsis{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: fit-content;
+}
+
+.book-image{
+    height: 60%;
+    width: 100%;
+}
+
+.oferta1{
+    text-align: justify;
+}

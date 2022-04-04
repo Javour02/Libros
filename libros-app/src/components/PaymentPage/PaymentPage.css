@@ -1,0 +1,54 @@
+.PaymentPage{
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: fit-content;
+  padding-right: 5%;
+  padding-left: 5%;
+
+}
+
+.specific-Info{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
+.photo{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: fit-content;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.book-image{
+  height: 60%;
+  width: 100%;
+}
+
+.info{
+  width: 100%;
+  background-color: #fff;
+}
+
+.input{
+  width: 100%;
+}
+.formAddress{
+  text-align: left;
+  
+  margin-bottom: 20px;
+}
+.formPayment{
+  text-align: left;
+}
