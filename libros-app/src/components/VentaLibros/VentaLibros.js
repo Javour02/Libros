@@ -8,7 +8,11 @@ import ImageButton from '../ImageButton/ImageButton.js';
 class ventaLibros extends Component {
     state = {
         actualItem:[],
-        actualSeller:[]
+        actualSeller:[{
+            name: "No User",
+            info: "No info",
+            price: 0
+        }]
     }
 
     componentDidMount(){
@@ -17,6 +21,12 @@ class ventaLibros extends Component {
             var theBooks = response.data;
             this.setState({
               actualItem: theBooks,
+            })
+        });
+        axios.get('/Javour02/Libros/sellUsers').then(response=>{
+            var users = response.data;
+            this.setState({
+                actualSeller: users,
             })
         });
     }
@@ -40,12 +50,12 @@ class ventaLibros extends Component {
                 </div>
                 <div className='vendedor'>
                     <img className='logoUsuario' src={usuario}/>
-                    <h1>Book Owner</h1>
+                    <h1>{this.state.actualSeller[0].name}</h1>
                     <button className='buttonVenta'>Chat button</button>
                 </div>
                 <div className='info'>
-                    <h2>Book price = 00.00$</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>Book price = {this.state.actualSeller[0].price}</h2>
+                    <p>{this.state.actualSeller[0].info}</p>
                 </div>
             </div>
         );
