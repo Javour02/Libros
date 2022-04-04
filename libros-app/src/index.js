@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import ContenedorView from './ContenedorView';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+axios.defaults.headers.common['Authorization'] ='AUTH TOKEN';
+axios.defaults.headers.get['Content-Type'] ='application/json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContenedorView/>
   </React.StrictMode>,
   document.getElementById('root')
 );
