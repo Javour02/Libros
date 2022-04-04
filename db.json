@@ -59,7 +59,7 @@
         {
             "id": 8,
             "name": "Seis de cuervos",
-            "description": "Es una novela de fantasía escrita por la autora israelí/estadounidense Leigh Bardugo publicada por Henry Holt y Co. en 2015.1​2​ La historia sigue a un grupo de ladrones y se desarrolla principalmente en la ciudad de Ketterdam.3​4​ La trama se cuenta desde puntos de vista en tercera persona de siete personajes diferentes.",
+            "description": "Kaz Brekker, un genio del crimen que regenta un antro de juegos de azar y apuestas conocido como el Club Cuervo, debe reunir a un grupo de seis personas con las habilidades necesarias para entrar (y salir) de la Corte de Hielo, una fortaleza inexpugnable que mantiene bajo llave un secreto que podría dinamitar el equilibrio de poder en el mundo.wwEs probable que nadie sobreviva a esta misión, pero si quiere hacerse rico más allá de lo que alcanza su imaginación, Kaz va a tener que jugárselo todo a una sola carta. Y esa carta es un Seis de Cuervos.",
             "author": "Leigh Bardugo",
             "image": "https://www.editorialhidra.com/media/hidra/images/cover-118707.jpg",
             "rating": 4.5
@@ -87,7 +87,8 @@
             "name": "Jhon Mayer",
             "price": 500,
             "info": "I live near Bogota, so i could go give you the book if you live in the city :)",
-            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg"
+            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg",
+            "type": "sell"
         }
     ],
     "profile": {
