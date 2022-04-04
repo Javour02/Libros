@@ -87,7 +87,8 @@
             "name": "Jhon Mayer",
             "price": 500,
             "info": "I live near Bogota, so i could go give you the book if you live in the city :)",
-            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg"
+            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg",
+            "type": "sell"
         }
     ],
     "profile": {
