@@ -81,6 +81,14 @@
             "rating": 4.6
         }
     ],
+    "sellUsers":[
+        {
+            "id": 1,
+            "name": "Jhon Mayer",
+            "price": 500,
+            "info": "I live near Bogota, so i could go give you the book if you live in the city :)"
+        }
+    ],
     "profile": {
     "name": "typicode"
     }
