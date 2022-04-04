@@ -4,6 +4,7 @@ import axios from '../AxiosComponent/AxiosComponent.js'
 import './VentaLibros.css';
 import usuario from '../Images/usuario-de-perfil.png';
 import ImageButton from '../ImageButton/ImageButton.js';
+import UserCard from '../UserCard/UserCard.js';
 
 class ventaLibros extends Component {
     state = {
@@ -53,15 +54,7 @@ class ventaLibros extends Component {
                         return(<ImageButton img={item.image}/>)
                     })}
                 </div>
-                <div className='vendedor'>
-                    <img className='logoUsuario' src={this.state.actualSeller[0].image}/>
-                    <h1>{this.state.actualSeller[0].name}</h1>
-                    <button className='buttonVenta'>Chat button</button>
-                </div>
-                <div className='info'>
-                    <h2>Book price = {this.state.actualSeller[0].price}</h2>
-                    <p>{this.state.actualSeller[0].info}</p>
-                </div>
+                <UserCard image={this.state.actualSeller[0].image} name={this.state.actualSeller[0].name} info={this.state.actualSeller[0].info} price={this.state.actualSeller[0].price}/>
             </div>
         );
     }

@@ -1,0 +1,46 @@
+.cardUser{
+    width: 100%;
+    height: fit-content;
+}
+
+.vendedor{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+
+.vendedor > h1,button{
+    margin-left: 5vw;
+}
+
+.logoUsuario{
+    height: 55px;
+    border-radius: 50%;
+}
+
+h2{
+    padding: 0px;
+}
+
+.leftUserInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+b{
+    font-size: larger;
+}
+
+.info{
+    height: 30%;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    margin-left: 20vw;
+    text-align: justify;
+}
