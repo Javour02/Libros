@@ -24,7 +24,7 @@ var PaymentPage = () =>{
             <div className="Address">
               <form className="formAddress">
                 <fieldset className="fieldset">
-                  <p>
+                  <span>
                     <h1>Address</h1>
                     <label>Address </label>
                     <input className="input" type="text"></input><br></br>
@@ -77,7 +77,7 @@ var PaymentPage = () =>{
                         <option value="China">China</option>
                         <option value="Christmas Island">Christmas Island</option>
                         <option value="Cocos Island">Cocos Island</option>
-                        <option value="Colombia" selected>Colombia</option>
+                        <option value="Colombia">Colombia</option>
                         <option value="Comoros">Comoros</option>
                         <option value="Congo">Congo</option>
                         <option value="Cook Islands">Cook Islands</option>
@@ -281,7 +281,7 @@ var PaymentPage = () =>{
                     <input className="input" type="text"></input><br></br>
                     <label>City </label>
                     <input className="input" type="text"></input><br></br>
-                  </p>
+                  </span>
                 </fieldset>
               </form>
             </div>
@@ -289,7 +289,7 @@ var PaymentPage = () =>{
             <div className="PaymentInfo">
               <form className="formPayment">
                 <fieldset className="fieldset">
-                  <p>
+                  <span>
                     <h1>Payment info</h1>
                     <label>Card type </label>
                     <input className="input" type="text"></input><br></br>
@@ -301,7 +301,7 @@ var PaymentPage = () =>{
                     <input className="input" type="text"></input><br></br>
                     <label>Document number </label>
                     <input className="input" type="text"></input><br></br>
-                  </p>
+                  </span>
                 </fieldset>
               </form>
             </div>
