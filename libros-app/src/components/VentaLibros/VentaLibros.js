@@ -7,11 +7,16 @@ import ImageButton from '../ImageButton/ImageButton.js';
 
 class ventaLibros extends Component {
     state = {
-        actualItem:[],
+        actualItem:[{
+            name: "No name",
+            author: "No author",
+            image: "No image"
+        }],
         actualSeller:[{
             name: "No User",
             info: "No info",
-            price: 0
+            price: 0,
+            image: ":("
         }]
     }
 
@@ -36,8 +41,8 @@ class ventaLibros extends Component {
             <div className='ventaLibros'>
                 <div className='titulo'>
                     <div className='nombreLibro'>
-                        <h1>Book Name</h1>
-                        <h2>By: Book autor</h2>
+                        <h1>{this.state.actualItem[0].name}</h1>
+                        <h2>{this.state.actualItem[0].author}</h2>
                     </div>
                     <button className='buttonVenta'>
                         Buy button
@@ -49,7 +54,7 @@ class ventaLibros extends Component {
                     })}
                 </div>
                 <div className='vendedor'>
-                    <img className='logoUsuario' src={usuario}/>
+                    <img className='logoUsuario' src={this.state.actualSeller[0].image}/>
                     <h1>{this.state.actualSeller[0].name}</h1>
                     <button className='buttonVenta'>Chat button</button>
                 </div>
