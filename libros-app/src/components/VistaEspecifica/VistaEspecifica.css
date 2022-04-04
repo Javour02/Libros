@@ -1,7 +1,6 @@
 .vistaEspecifica{
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
 }
 
 .estrellas{
@@ -20,12 +19,16 @@
     text-align: justify;
 }
 
+p{
+    padding-right: 1vw;
+}
+
 .content{
     display: flex;
     flex-direction: column;
     width: 70%;
     height: fit-content;
-    padding-right: 40px;
+    padding-right: 3vw;
 }
 
 .sidebar{
@@ -38,28 +41,21 @@
 
 .specific-Info{
     width: 100%;
+    padding: 3vw 1vw;
     display: flex;
     flex-direction: row;
     height: fit-content;
 }
 
-.comment1{
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    text-align:justify;
-    background-color: #c4c4c4;
-}
-
 .Comments{
-    padding: 40px;
-    
+    padding: 0 40px;
 }
 
 .photo{
     display: flex;
     flex-direction: column;
     width: 40%;
+    padding: 0vw 3vw;
     height: fit-content;
     justify-content:center;
     align-items: center;
@@ -75,9 +71,10 @@
 
 .book-image{
     height: 60%;
-    width: 100%;
+    width: 90%;
 }
 
 .oferta1{
     text-align: justify;
+    margin: 1vw;
 }

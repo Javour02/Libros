@@ -10,13 +10,32 @@
     align-items: center;
 }
 
+.divButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;  
+}
+
+.botonNavbar{
+    margin: 0.5vw;
+}
+
 button{
     height: 100%;
+    width: 5vw;
     text-decoration: none;
     border-color: #9ec5e7;
     background-color: #9ec5e7;
     border-style: none;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.imagenBoton{
+    width: 70%;
 }
 
 img{

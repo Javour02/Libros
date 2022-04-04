@@ -54,7 +54,7 @@ class ventaLibros extends Component {
                         return(<ImageButton img={item.image}/>)
                     })}
                 </div>
-                <UserCard image={this.state.actualSeller[0].image} name={this.state.actualSeller[0].name} info={this.state.actualSeller[0].info} price={this.state.actualSeller[0].price}/>
+                <UserCard type={this.state.actualSeller[0].type} image={this.state.actualSeller[0].image} name={this.state.actualSeller[0].name} info={this.state.actualSeller[0].info} price={this.state.actualSeller[0].price}/>
             </div>
         );
     }
