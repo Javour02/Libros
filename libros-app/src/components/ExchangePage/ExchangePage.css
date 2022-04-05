@@ -1,0 +1,35 @@
+.InfoLibro {
+  display: inline-block;
+
+  margin-top: 30px;
+  vertical-align: top;
+}
+.Info{
+  margin-left: 15%;
+}
+.Address{
+  margin-top: 70px;
+  margin: auto;
+  width: 50%;
+  margin-left: 21%;
+  padding: 10px;
+  width: 50%;
+}
+.btn {
+  height: 200px;
+  position: relative;
+
+}
+
+.btn-btn {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 20%;
+  transform: translate(-50%, -10%);
+  background-color:grey;
+}
+.choose-btn{
+  background-color:grey;
+}

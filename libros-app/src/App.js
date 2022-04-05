@@ -3,6 +3,7 @@ import VistaEspecifica from './components/VistaEspecifica/VistaEspecifica';
 import MainMenu from './pages/MainMenu/MainMenu';
 import LoansPage from './components/LoansPage/LoansPage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
+import ExchangePage from './components/ExchangePage/ExchangePage';
 import './App.css';
 
 import { Component } from 'react'
@@ -36,7 +37,12 @@ class App extends Component {
             path="/payment"
             element={<PaymentPage />}
           />
+          <Route
+            path="/exchange"
+            element={<ExchangePage />}
+          />
         </Routes>
+
       </BrowserRouter>
 
     );
