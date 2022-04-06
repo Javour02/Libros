@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import portada from '../Images/Portada.png';
 import estrellas from '../Images/estrellas.jpg';
 import axios from '../AxiosComponent/AxiosComponent.js'
+import Comment from '../Comment/Comment.js';
 import './VistaEspecifica.css';
+import UserCard from '../UserCard/UserCard';
 
 class vistaEspecifica extends Component{
     state = {
@@ -14,12 +16,8 @@ class vistaEspecifica extends Component{
             rating: 0,
 
         }],
-        comments:[{
-            idBook: 0,
-            name: "No User",
-            image: "No image",
-            comment: "No comment"
-        }]
+        comments:[],
+        users:[]
     }
 
     componentDidMount(){
@@ -29,10 +27,23 @@ class vistaEspecifica extends Component{
               actualItem: theBooks,
             })
             axios.get('/Javour02/Libros/comments').then(response=>{
-            var theComments = response.data;
+                var theComments = response.data;
+                var bookComments = []
+                theComments.forEach(element => {
+                    //if(comment.idBook = this.state.actualItems.id){
+                        //bookComments.push(element);
+                    //}
+                });
                 this.setState({
                 comments : theComments,
                 })
+                console.log(theComments);
+            })
+        });
+        axios.get('/Javour02/Libros/sellUsers').then(response=>{
+            var theUsers = response.data;
+            this.setState({
+              users: theUsers,
             })
         });
         
@@ -100,30 +111,16 @@ class vistaEspecifica extends Component{
                 <div className='content'>
                     {this.validate(7)}
                     <div className='Comments'>
-                        <div className='comment1'>
-                            <h2>Person name</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
+                        <h2>Comentarios: </h2>
+                        {this.state.comments.map((com)=>{
+                            return(<Comment name={com.name} image={com.image} comment={com.comment}/>)
+                        })}
                     </div>
                 </div>
                 <div className='sidebar'>
-                    <div className='oferta1'>
-                        <h2>Person name</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div className='oferta1'>
-                        <h2>Person name</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div className='oferta1'>
-                        <h2>Person name</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div className='oferta1'>
-                        <h2>Person name</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    
+                    {this.state.users.map((user)=>{
+                        return(<UserCard type={user.type} image={user.image} name={user.name} info={user.info} price={user.price}/>)
+                    })}        
                 </div>
             </div>
         );

@@ -26,7 +26,7 @@ p{
 .content{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     height: fit-content;
     padding-right: 3vw;
 }
@@ -34,21 +34,21 @@ p{
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     height: fit-content;
-    padding: 10px;
+    padding: 1vh 3vw 0px 0px;
 }
 
 .specific-Info{
     width: 100%;
-    padding: 3vw 1vw;
+    padding: 3vw 1vw 0px;
     display: flex;
     flex-direction: row;
     height: fit-content;
 }
 
 .Comments{
-    padding: 0 40px;
+    padding: 0px 3vw;
 }
 
 .photo{
@@ -77,4 +77,8 @@ p{
 .oferta1{
     text-align: justify;
     margin: 1vw;
+}
+
+h2{
+    margin-bottom: 2vh;
 }

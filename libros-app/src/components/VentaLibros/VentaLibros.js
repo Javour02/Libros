@@ -17,7 +17,8 @@ class ventaLibros extends Component {
             name: "No User",
             info: "No info",
             price: 0,
-            image: ":("
+            image: ":(",
+            type: "No type"
         }]
     }
 
@@ -42,11 +43,11 @@ class ventaLibros extends Component {
             <div className='ventaLibros'>
                 <div className='titulo'>
                     <div className='nombreLibro'>
-                        <h1>{this.state.actualItem[0].name}</h1>
+                        <h1 className='marginTitle'>{this.state.actualItem[0].name}</h1>
                         <h2>{this.state.actualItem[0].author}</h2>
                     </div>
                     <button className='buttonVenta'>
-                        Buy button
+                        {this.state.actualSeller[0].type} button
                     </button>
                 </div>
                 <div className='librosScroll'>

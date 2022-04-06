@@ -1,8 +1,34 @@
 
+.imgComment{
+    height: 8vh;
+    border-radius: 50%;
+}
+
 .comment1{
     display: flex;
     padding: 10px;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     text-align:justify;
-    background-color: #c4c4c4;
+    background-color: rgb(193, 220, 250);
+    box-shadow: 5px 5px rgb(171, 190, 251);
+    margin-bottom: 2vh;
+}
+
+p{
+    margin: 0ch;
+}
+
+.imagenComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.comment2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }

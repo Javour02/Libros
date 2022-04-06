@@ -6,12 +6,19 @@
 
 .ventaLibros{
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marginTitle{
+    margin-right: 20vw;
 }
 
 .buttonVenta{
     width: fit-content;
     height: 100%;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15%;
     box-shadow: 3px 3px #3e3e3e;
 }

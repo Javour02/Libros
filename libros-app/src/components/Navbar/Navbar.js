@@ -9,7 +9,7 @@ var navbar = () =>{
     return(
         <div className='navbar'>
             <img className='logo' src={logo}/>
-            <input className='searchbar' type="text"></input>
+            <input className='searchbar' type="search"></input>
             <div className='divButtons'>
                 <button className='botonNavbar'>loans</button>
                 <button className='botonNavbar'>my books</button>

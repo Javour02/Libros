@@ -1,16 +1,23 @@
 .cardUser{
-    width: 100%;
+    width:fit-content;
     height: fit-content;
+    background-color: rgb(193, 220, 250);
+    margin: 2vh 0px 2vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(171, 190, 251);
 }
 
 .vendedor{
     height: 10%;
     display: flex;
     flex-direction: row;
-    padding: 0 30px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 5vh;
+}
+
+.price{
+    font-size: 20px;
 }
 
 .vendedor > h1,button{
@@ -26,10 +33,22 @@ h2{
     padding: 0px;
 }
 
+h1{
+    align-items: center;
+    margin-left: 2vw;
+}
+
 .leftUserInfo{
     display: flex;
     flex-direction: row;
+    justify-content: left;
     align-items: center;
+    width: 25%;
+}
+
+.tituloReview{
+    font-size: large;
+    text-align: center;
 }
 
 b{
@@ -41,6 +60,5 @@ b{
     display: flex;
     padding: 30px;
     flex-direction: column;
-    margin-left: 20vw;
     text-align: justify;
 }
