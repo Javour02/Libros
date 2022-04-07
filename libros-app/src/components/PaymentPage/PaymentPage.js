@@ -310,7 +310,7 @@ var PaymentPage = () =>{
               <h1>Total</h1>
               <h3>$00.00</h3>
               <p>With shipping</p>
-              <button>Buy button</button>
+              <button className="ButtonBuy">Buy button</button>
             </div>
           </div>
         </div>
