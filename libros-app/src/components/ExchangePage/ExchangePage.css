@@ -1,21 +1,27 @@
-.InfoLibro {
+.InfoLibroEx {
   display: inline-block;
-
+ 
   margin-top: 30px;
   vertical-align: top;
+  height: 400px;
 }
-.Info{
-  margin-left: 15%;
+.InfoEx{
+  margin-left: 30%;
 }
-.Address{
-  margin-top: 70px;
-  margin: auto;
+.bookImageEx{
+  height:300px;
+}
+.Address{  
   width: 50%;
-  margin-left: 21%;
-  padding: 10px;
-  width: 50%;
+  margin-top: 50px;
+ margin-left: 10%;
+ margin-right: 15%;
+
 }
-.btn {
+.formAddress{
+  width: 400px;
+}
+.btnEx {
   height: 200px;
   position: relative;
 
@@ -32,4 +38,6 @@
 }
 .choose-btn{
   background-color:grey;
+  height: 50px;
+  width: 100px;
 }

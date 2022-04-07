@@ -5,16 +5,16 @@ import './ExchangePage.css';
 
 const ExchangePage = () => {
   return (
-    <span className="Info">
-      <div className="InfoLibro">
-        <img className="book-image" src={portada}></img>
+    <div className="InfoEx">
+      <div className="InfoLibroEx">
+        <img className="bookImageEx" src={portada}></img>
         <h1>Book name</h1>
       </div>
-      <div className="InfoLibro">
+      <div className="InfoLibroEx">
         <img className="flecha" src={flechas}></img>
       </div>
-      <div className="InfoLibro">
-        <img className="book-image" src={portada}></img>
+      <div className="InfoLibroEx">
+        <img className="bookImageEx" src={portada}></img>
         <h1>Book name</h1>
         <p>By book author</p>
         <button className="choose-btn">ChooseBook button</button>
@@ -22,7 +22,7 @@ const ExchangePage = () => {
  
       <div className="Address">
               <form className="formAddress">
-                <fieldset className="fieldset">
+                <fieldset className="fieldsetEx">
                   <span>
                     <h1>Address</h1>
                     <label>Address </label>
@@ -283,12 +283,12 @@ const ExchangePage = () => {
                   </span>
                 </fieldset>
               </form>
-                <div className="btn">
+                <div className="btnEx">
                   <button className="btn-btn">Change button</button>
                 </div>
             </div>
 
-    </span>
+    </div>
 
   )
 }
