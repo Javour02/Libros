@@ -47,6 +47,38 @@
             "author": "Lewis Carroll",
             "image": "https://imagenes.elpais.com/resizer/wfwo1xsjDYX7nfICTIDEh9WvXnE=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/VULX57VE7CHNAWXJXFXH6J3JHA.jpg",
             "rating": 4.8
+        },
+        {
+            "id": 7,
+            "name": "Y no quedó ninguno",
+            "description": "Diez negritos, o eventualmente, Y no quedó ninguno, ​ cuyo título original en inglés es Ten little niggers, es una novela policíaca de la escritora británica Agatha Christie, publicada originalmente en Reino Unido por Collins Crime Club el 6 de noviembre de 1939. El título, que hace referencia a una canción infantil, ​ fue cambiado a And Then There Were None en la primera edición de Estados Unidos, y el título de la canción de la novela fue cambiado a Ten Little Indians. ​ La novela cuenta la historia de diez personas implicadas en la muerte de otras personas en el pasado y que lograron escapar de la justicia, que son invitadas a pasar un fin de semana en una isla. Allí comienzan a ser asesinadas una a una de forma similar a la que se menciona en cada estrofa de la canción.",
+            "author": "Agatha Christie",
+            "image": "https://images.cdn1.buscalibre.com/fit-in/360x360/58/3b/583b512451a75dff24c6e2dfcffa705c.jpg",
+            "rating": 4.9
+        },
+        {
+            "id": 8,
+            "name": "Seis de cuervos",
+            "description": "Kaz Brekker, un genio del crimen que regenta un antro de juegos de azar y apuestas conocido como el Club Cuervo, debe reunir a un grupo de seis personas con las habilidades necesarias para entrar (y salir) de la Corte de Hielo, una fortaleza inexpugnable que mantiene bajo llave un secreto que podría dinamitar el equilibrio de poder en el mundo.wwEs probable que nadie sobreviva a esta misión, pero si quiere hacerse rico más allá de lo que alcanza su imaginación, Kaz va a tener que jugárselo todo a una sola carta. Y esa carta es un Seis de Cuervos.",
+            "author": "Leigh Bardugo",
+            "image": "https://www.editorialhidra.com/media/hidra/images/cover-118707.jpg",
+            "rating": 4.5
+        },
+        {
+            "id": 9,
+            "name": "El león, la bruja y el armario",
+            "description": "Es una novela fantástica infantil publicada por C. S. Lewis en 1950. Es el libro más conocido de la serie de siete libros llamada Las Crónicas de Narnia. Aunque en orden de publicación fue el primer libro de la serie escrito por el autor, es en realidad el segundo según la cronología interna, tras El sobrino del mago",
+            "author": "C. S. Lewis",
+            "image": "https://static.wikia.nocookie.net/narnia/images/4/43/El_le%C3%B3n%2C_la_bruja_y_el_armario_poster.jpg/revision/latest/top-crop/width/360/height/450?cb=20180414192355&path-prefix=es",
+            "rating": 4.7
+        },
+        {
+            "id": 10,
+            "name": "El código Da Vinci",
+            "description": "Al combinar los géneros de suspenso detectivesco y esoterismo Nueva Era, con una teoría de conspiración relativa al Santo Grial y al papel de María Magdalena en el cristianismo, la novela espoleó el difundido interés (sobre todo en los Estados Unidos de América) por ciertas teorías de complots «urdidos en la sombra por poderes ocultos», un fenómeno definido por Brown como el «auge conspiracionista».",
+            "author": "Dan Brown",
+            "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/d2/74/d2745514f8ea4de663d5c8c659a162b2.jpg",
+            "rating": 4.6
         }
         
     ],
@@ -76,40 +108,5 @@
     ],
     "profile": {
     "name": "typicode"
-    },
-    "notifications": [
-        {
-            "bookName": "Six of crows",
-            "bookAuthor": "Leigh Bardugo",
-            "bookImage": "https://www.editorialhidra.com/media/hidra/images/cover-118707.jpg",
-            "action": "sell",
-            "userName": "Amelia"
-        },
-        {
-            "bookName": "El código Da Vinci",
-            "bookAuthor": "Dan Brown",
-            "bookImage": "https://images.cdn3.buscalibre.com/fit-in/360x360/d2/74/d2745514f8ea4de663d5c8c659a162b2.jpg",
-            "action": "change",
-            "userName": "Michael Adams"
-        }
-    ],
-
-    "changes":[
-        {
-            "bookName": "El león, la bruja y el armario",
-            "bookAuthor": "C. S. Lewis",
-            "bookImage": "https://static.wikia.nocookie.net/narnia/images/4/43/El_le%C3%B3n%2C_la_bruja_y_el_armario_poster.jpg/revision/latest/top-crop/width/360/height/450?cb=20180414192355&path-prefix=es",
-            "userName": "Alexander",
-            "userAddress": "Cll 22 #10-03"
-        }
-    ],
-
-    "loans" :[
-        {
-            "bookName": "Sueño en el pabellón rojo",
-            "bookAuthor": "Cao Xueqin",
-            "bookImage": "https://laflechanegra.files.wordpress.com/2014/10/cao-xueqin-suec3b1o-1.jpg",
-            "dueDate": "10/07/2022"
-        }
-    ]
+    }
 }
