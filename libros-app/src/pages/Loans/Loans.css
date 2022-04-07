@@ -1,0 +1,41 @@
+.BookImage{
+    width:  150px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.CurrentlyLoans{
+    display: inline-block;
+    
+}
+
+.MyLoans{
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.Information{
+    display: inline-block;
+}
+
+.header{
+    border-bottom: 3px solid #000000;
+    text-align: left;
+}
+
+.contentLoan{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.Books{
+    margin-top: 40px;
+    display: inline-block;
+    margin-right:40px;
+    margin-left:40px;
+}
+
+.loans{
+    text-align: center;
+}

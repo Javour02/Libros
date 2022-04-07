@@ -6,12 +6,12 @@
 
 .CurrentlyLoans{
     display: inline-block;
-    
+    padding-top: 15px;
 }
 
 .MyLoans{
     float: right;
-    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 .Information{
@@ -23,7 +23,7 @@
     text-align: left;
 }
 
-.content{
+.contentLoan{
     margin-left: 40px;
     margin-right: 40px;
 }
