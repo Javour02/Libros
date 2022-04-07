@@ -1,0 +1,64 @@
+.cardUser{
+    width:fit-content;
+    height: fit-content;
+    background-color: rgb(193, 220, 250);
+    margin: 2vh 0px 2vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(171, 190, 251);
+}
+
+.vendedor{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+
+.price{
+    font-size: 20px;
+}
+
+.vendedor > h1,button{
+    margin-left: 5vw;
+}
+
+.logoUsuario{
+    height: 55px;
+    border-radius: 50%;
+}
+
+h2{
+    padding: 0px;
+}
+
+h1{
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.leftUserInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 25%;
+}
+
+.tituloReview{
+    font-size: large;
+    text-align: center;
+}
+
+b{
+    font-size: larger;
+}
+
+.info{
+    height: 30%;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    text-align: justify;
+}

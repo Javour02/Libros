@@ -1,39 +1,65 @@
-import React from 'react';
+import React, { Component } from 'react';
 import portada from '../Images/Portada.png';
+import axios from '../AxiosComponent/AxiosComponent.js'
 import './VentaLibros.css';
 import usuario from '../Images/usuario-de-perfil.png';
+import ImageButton from '../ImageButton/ImageButton.js';
+import UserCard from '../UserCard/UserCard.js';
 
-const ventaLibros = () =>{
-    return(
-        <div className='ventaLibros'>
-            <div className='titulo'>
-                <div className='nombreLibro'>
-                    <h1>Book Name</h1>
-                    <h2>By: Book autor</h2>
+class ventaLibros extends Component {
+    state = {
+        actualItem:[{
+            name: "No name",
+            author: "No author",
+            image: "No image"
+        }],
+        actualSeller:[{
+            name: "No User",
+            info: "No info",
+            price: 0,
+            image: ":(",
+            type: "No type"
+        }]
+    }
+
+    componentDidMount(){
+        let book = localStorage.getItem('currentBook');
+        axios.get('/Javour02/Libros/books').then(response=>{
+            var theBooks = response.data;
+            this.setState({
+              actualItem: theBooks,
+            })
+        });
+        axios.get('/Javour02/Libros/sellUsers').then(response=>{
+            var users = response.data;
+            this.setState({
+                actualSeller: users,
+            })
+        });
+    }
+
+    render(){
+        return(
+            <div className='ventaLibros'>
+                <div className='titulo'>
+                    <div className='nombreLibro'>
+                        <h1 className='marginTitle'>{this.state.actualItem[0].name}</h1>
+                        <h2>{this.state.actualItem[0].author}</h2>
+                    </div>
+                    <button className='buttonVenta'>
+                        {this.state.actualSeller[0].type} button
+                    </button>
                 </div>
-                <button>
-                    Buy button
-                </button>
+                <div className='librosScroll'>
+                    {this.state.actualItem.map(item=>{
+                        return(<ImageButton img={item.image}/>)
+                    })}
+                </div>
+                <UserCard type={this.state.actualSeller[0].type} image={this.state.actualSeller[0].image} name={this.state.actualSeller[0].name} info={this.state.actualSeller[0].info} price={this.state.actualSeller[0].price}/>
             </div>
-            <div className='librosScroll'>
-                <button className='botonesFlecha'>→</button>
-                <img className='book-image' src={portada}/>
-                <img className='book-image' src={portada}/>
-                <img className='book-image' src={portada}/>
-                <img className='book-image' src={portada}/>
-                <button className='botonesFlecha'>←</button>
-            </div>
-            <div className='vendedor'>
-                <img className='logoUsuario' src={usuario}/>
-                <h1>Book Owner</h1>
-                <button>Chat button</button>
-            </div>
-            <div className='info'>
-                <h2>Book price = 00.00$</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    );
+        );
+    }
+    
 }
 
 export default ventaLibros;

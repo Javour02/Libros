@@ -4,6 +4,8 @@ import MainMenu from './pages/MainMenu/MainMenu';
 import LoansPage from './components/LoansPage/LoansPage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import ExchangePage from './components/ExchangePage/ExchangePage';
+import AddReview from './components/AddReview/AddReview.js';
+import VentaLibros from './components/VentaLibros/VentaLibros.js';
 import './App.css';
 
 import { Component } from 'react'

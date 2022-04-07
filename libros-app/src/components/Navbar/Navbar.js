@@ -9,18 +9,20 @@ var navbar = () =>{
     return(
         <div className='navbar'>
             <img className='logo' src={logo}/>
-            <input className='searchbar' type="text"></input>
-            <button>loans</button>
-            <button>my books</button>
-            <button>
-                <img src={mensajes}/>
-            </button>
-            <button>
-                <img src={notificaciones}/>
-            </button>
-            <button>
-                <img src={usuario}/>
-            </button>
+            <input className='searchbar' type="search"></input>
+            <div className='divButtons'>
+                <button className='botonNavbar'>loans</button>
+                <button className='botonNavbar'>my books</button>
+                <button className='botonNavbar'>
+                    <img className="imagenBoton" src={mensajes}/>
+                </button>
+                <button className='botonNavbar'>
+                    <img className="imagenBoton" src={notificaciones}/>
+                </button>
+                <button className='botonNavbar'>
+                    <img className="imagenBoton" src={usuario}/>
+                </button>
+            </div>
         </div>
     );
 }
