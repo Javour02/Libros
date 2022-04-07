@@ -108,4 +108,39 @@
     "profile": {
     "name": "typicode"
     }
+    "notifications" = [
+        {
+            "bookName": "Six of crows",
+            "bookAuthor": "Leigh Bardugo",
+            "bookImage": "https://www.editorialhidra.com/media/hidra/images/cover-118707.jpg",
+            "action": "sell",
+            "userName": "Amelia"
+        },
+        {
+            "bookName": "El código Da Vinci",
+            "bookAuthor": "Dan Brown",
+            "bookImage": "https://images.cdn3.buscalibre.com/fit-in/360x360/d2/74/d2745514f8ea4de663d5c8c659a162b2.jpg",
+            "action": "change",
+            "userName": "Michael Adams"
+        }
+    ]
+
+    "changes" = [
+        {
+            "bookName": "El león, la bruja y el armario",
+            "bookAuthor": "C. S. Lewis",
+            "bookImage": "https://static.wikia.nocookie.net/narnia/images/4/43/El_le%C3%B3n%2C_la_bruja_y_el_armario_poster.jpg/revision/latest/top-crop/width/360/height/450?cb=20180414192355&path-prefix=es",
+            "userName": "Alexander",
+            "userAddress": "Cll 22 #10-03"
+        }
+    ]
+
+    "loans" = [
+        {
+            "bookName": "Sueño en el pabellón rojo",
+            "bookAuthor": "Cao Xueqin",
+            "bookImage": "https://laflechanegra.files.wordpress.com/2014/10/cao-xueqin-suec3b1o-1.jpg",
+            "dueDate": "10/07/2022"
+        },
+    ]
 }
