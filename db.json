@@ -95,15 +95,15 @@
     "comments":[
         {
             "idBook": 1,
-            "name": "Jhon Mayer",
-            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg",
+            "name": "Jana",
+            "image": "https://smoda.elpais.com/wp-content/uploads/2017/08/40mujeres14-1-635x480.jpg",
             "comment": "Me encanto este libro. Muy recomendado"
         },
         {
-            "idBook": 1,
-            "name": "Michael Adams",
-            "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg",
-            "comment":"Me encant000000000000!!!!, Es una historia que no vas a poder parar de leer"
+            "idBook": 2,
+            "name": "Olivia",
+            "image": "https://cdn2.salud180.com/sites/default/files/styles/medium/public/field/image/2020/03/estas_son_las_caracteristicas_que_vuelven_a_una_mujer_irresistible_segun_ellos.jpg",
+            "comment":"Me encantoooooooooooo!!!!, Es una historia que no vas a poder parar de leer"
         }
     ]
 }
