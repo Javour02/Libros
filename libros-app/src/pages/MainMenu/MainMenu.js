@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import img from '../../components/Images/SeisDeCuervos.jpg';
 import './MainMenu.css';
-import Notification from '../../components/MainMenuComponents/Notification';
-import Loan from '../../components/MainMenuComponents/Loan';
-import ChangeBook from '../../components/MainMenuComponents/ChangeBook';
+import Notification from '../../components/MainMenu/Notification';
+import Loan from '../../components/MainMenu/Loan';
+import ChangeBook from '../../components/MainMenu/ChangeBook';
 
 
 var mainMenu = (props) => {
     return (
-        <div className="content">
+        <div className="contentMain">
             <div className="currentlyLoans">
-                <Link to="/loans"><h2>Currently Loans</h2></Link>
+                <Link to="/loans"><h2 >Currently Loans</h2></Link>
                 {
                     props.data.loans.map(loan => (
                         <Loan loan={loan}></Loan>

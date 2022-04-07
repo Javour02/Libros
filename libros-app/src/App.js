@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar/Navbar';
 import VistaEspecifica from './components/VistaEspecifica/VistaEspecifica';
 import MainMenu from './pages/MainMenu/MainMenu';
-import LoansPage from './components/LoansPage/LoansPage';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import ExchangePage from './components/ExchangePage/ExchangePage';
 import AddReview from './components/AddReview/AddReview.js';
@@ -78,7 +77,6 @@ class App extends Component {
 
           <Route
             path="/"
-
             element={<MainMenu data={this.state}/>}
             exact
           />

@@ -1,4 +1,4 @@
-.content {
+.contentMain {
     align-items: left;
     text-align: center;
     width: 100%;
@@ -28,7 +28,7 @@
     width: 150px;
 }
 
-.bookImage {
+.bookImageMain {
     background-color: #C4C4C4;
     width: 150px;
 }

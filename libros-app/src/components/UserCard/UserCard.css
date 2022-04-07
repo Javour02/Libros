@@ -18,7 +18,8 @@
 
 .price{
     font-size: 20px;
-    margin-bottom: 1vw;
+    margin-bottom: 1vw; 
+    padding: 0px;
 }
 
 .vendedor > h1,button{
@@ -30,9 +31,6 @@
     border-radius: 50%;
 }
 
-h2{
-    padding: 0px;
-}
 
 h1{
     align-items: center;

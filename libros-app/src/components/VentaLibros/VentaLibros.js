@@ -44,7 +44,7 @@ class ventaLibros extends Component {
                 <div className='titulo'>
                     <div className='nombreLibro'>
                         <h1 className='marginTitle'>{this.state.actualItem[0].name}</h1>
-                        <h2>{this.state.actualItem[0].author}</h2>
+                        <h2 className='h2VentaLibros'>{this.state.actualItem[0].author}</h2>
                     </div>
                     <button className='buttonVenta'>
                         {this.state.actualSeller[0].type} button

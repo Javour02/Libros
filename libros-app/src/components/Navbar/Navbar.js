@@ -9,10 +9,10 @@ import './Navbar.css';
 var navbar = () =>{
     return(
         <div className='navbar'>
-            <img className='logo' src={logo}/>
+            <Link to="/"><img className='logo' src={logo}/></Link>
             <input className='searchbar' type="search"></input>
             <div className='divButtons'>
-                <button className='botonNavbar'>loans</button>
+                <Link to="/loans"><button className='botonNavbar'>loans</button></Link>
                 <button className='botonNavbar'>my books</button>
                 <button className='botonNavbar'>
                     <img className="imagenBoton" src={mensajes}/>
