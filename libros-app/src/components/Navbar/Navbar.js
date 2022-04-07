@@ -3,14 +3,15 @@ import mensajes from '../Images/Mensajes.png';
 import notificaciones from '../Images/notificacion.png';
 import logo from '../Images/Logo.png';
 import usuario from '../Images/usuario-de-perfil.png';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 var navbar = () =>{
     return(
         <div className='navbar'>
-            <img className='logo' src={logo}/>
+            <Link to="/"><img className='logo' src={logo}/></Link>
             <input className='searchbar' type="text"></input>
-            <button>loans</button>
+            <Link to="/loans">loans</Link>
             <button>my books</button>
             <button>
                 <img src={mensajes}/>
