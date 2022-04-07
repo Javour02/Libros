@@ -60,14 +60,14 @@ class vistaEspecifica extends Component{
     validate(num){
         if(this.state.actualItem[num] !== undefined){
             return(
-                <div className='specific-Info' >
-                        <div className='photo'>
-                            <img className='book-image' src={this.state.actualItem[num].image}/>
+                <div className='specific-Info-Specific-View' >
+                        <div className='photo-Specific-View'>
+                            <img className='book-image-Specific-View' src={this.state.actualItem[num].image}/>
                             <div className='rating'>
                                 Rate this book
                                 <img className='estrellas' src={estrellas}/>
                             </div>
-                            <button>
+                            <button className='buttonAddReviewSpecificView'>
                                 Write a review
                             </button>
                         </div>
@@ -82,14 +82,14 @@ class vistaEspecifica extends Component{
             );
         }else{
             return(
-                <div className='specific-Info' >
+                <div className='specific-Info-Specific-View' >
                         <div className='photo'>
                             <img className='book-image' src={this.state.actualItem[0].image}/>
                             <div className='rating'>
                                 Rate this book
                                 <img className='estrellas' src={estrellas}/>
                             </div>
-                            <button>
+                            <button className='buttonAddReviewSpecificView'>
                                 Write a review
                             </button>
                         </div>
@@ -108,7 +108,7 @@ class vistaEspecifica extends Component{
     render(){    
         return(
             <div className='vistaEspecifica'>
-                <div className='content'>
+                <div className='content-specific-view'>
                     {this.validate(7)}
                     <div className='Comments'>
                         <h2>Comentarios: </h2>

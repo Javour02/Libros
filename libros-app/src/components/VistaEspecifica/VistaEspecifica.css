@@ -23,12 +23,19 @@ p{
     padding-right: 1vw;
 }
 
-.content{
+.content-specific-view{
     display: flex;
     flex-direction: column;
     width: 65%;
     height: fit-content;
     padding-right: 3vw;
+}
+
+.buttonAddReviewSpecificView{
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px #3e3e3e;
+    width: 80%;
 }
 
 .sidebar{
@@ -39,7 +46,7 @@ p{
     padding: 1vh 3vw 0px 0px;
 }
 
-.specific-Info{
+.specific-Info-Specific-View{
     width: 100%;
     padding: 3vw 1vw 0px;
     display: flex;
@@ -51,11 +58,11 @@ p{
     padding: 0px 3vw;
 }
 
-.photo{
+.photo-Specific-View{
     display: flex;
     flex-direction: column;
     width: 40%;
-    padding: 0vw 3vw;
+    padding: 0vw 1vw;
     height: fit-content;
     justify-content:center;
     align-items: center;
@@ -69,7 +76,7 @@ p{
     height: fit-content;
 }
 
-.book-image{
+.book-image-Specific-View{
     height: 60%;
     width: 90%;
 }

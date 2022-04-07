@@ -32,6 +32,14 @@ class App extends Component {
             element={<VistaEspecifica />}
           />
           <Route
+            path="/sell-Books"
+            element={<VentaLibros />}
+          />
+          <Route
+            path="/add-review"
+            element={<AddReview />}
+          />
+          <Route
             path="/loans"
             element={<LoansPage />}
           />

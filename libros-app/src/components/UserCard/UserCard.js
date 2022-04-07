@@ -20,7 +20,7 @@ const UserCard = (props)=>{
                 </div>
                 <button className='buttonVenta buttonReview'>Chat button</button>
             </div>
-            <div className='info'>
+            <div className='info-User'>
                 <h2 className='price'>{changeType(props.type)}{props.price}$</h2>
                 <p>
                     <b>Information:</b><br/>
