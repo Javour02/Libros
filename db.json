@@ -98,14 +98,6 @@
             "info": "Este es un gran libro pero, deseo leer libros nuevos, por lo que estoy vendiendo los que ya lei",
             "image": "https://cdn2.salud180.com/sites/default/files/styles/medium/public/field/image/2020/03/estas_son_las_caracteristicas_que_vuelven_a_una_mujer_irresistible_segun_ellos.jpg",
             "type": "sell"
-        },
-        {
-            "id": 3,
-            "name": "Maria Niño",
-            "price": 515,
-            "info": "Este libro tiene un gran valor sentimental para mi. Espero encontrar el cliente indicado",
-            "image": "https://smoda.elpais.com/wp-content/uploads/2017/08/40mujeres14-1-635x480.jpg",
-            "type": "sell"
         }
     ],
     "comments":[
