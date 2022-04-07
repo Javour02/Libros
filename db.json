@@ -90,14 +90,6 @@
             "info": "Vivo cerca de bogota, si vives en la ciudad, podemos encontrarnos para negociar.",
             "image": "https://media.cnnchile.com/sites/2/2018/09/humano.jpg",
             "type": "sell"
-        },
-        {
-            "id": 2,
-            "name": "Catalina Sanchez",
-            "price": 485,
-            "info": "Este es un gran libro pero, deseo leer libros nuevos, por lo que estoy vendiendo los que ya lei",
-            "image": "https://cdn2.salud180.com/sites/default/files/styles/medium/public/field/image/2020/03/estas_son_las_caracteristicas_que_vuelven_a_una_mujer_irresistible_segun_ellos.jpg",
-            "type": "sell"
         }
     ],
     "comments":[
