@@ -106,14 +106,6 @@
             "info": "Este libro tiene un gran valor sentimental para mi. Espero encontrar el cliente indicado",
             "image": "https://smoda.elpais.com/wp-content/uploads/2017/08/40mujeres14-1-635x480.jpg",
             "type": "sell"
-        },
-        {
-            "id": 4,
-            "name": "Joaquin Vivez",
-            "price": 500,
-            "info": "Encontre este libro y en realidad no me gusta leer.",
-            "image": "https://www.labsaenzrenauld.com/wp-content/uploads/2020/10/Perfil-hombre-ba%CC%81sico_738242395.jpg",
-            "type": "sell"
         }
     ],
     "comments":[
