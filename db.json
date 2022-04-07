@@ -108,7 +108,7 @@
     "profile": {
     "name": "typicode"
     }
-    "notifications" = [
+    "notifications": [
         {
             "bookName": "Six of crows",
             "bookAuthor": "Leigh Bardugo",
@@ -125,7 +125,7 @@
         }
     ]
 
-    "changes" = [
+    "changes":[
         {
             "bookName": "El león, la bruja y el armario",
             "bookAuthor": "C. S. Lewis",
@@ -135,7 +135,7 @@
         }
     ]
 
-    "loans" = [
+    "loans" :[
         {
             "bookName": "Sueño en el pabellón rojo",
             "bookAuthor": "Cao Xueqin",
