@@ -76,7 +76,7 @@
     ],
     "profile": {
     "name": "typicode"
-    }
+    },
     "notifications": [
         {
             "bookName": "Six of crows",
@@ -92,7 +92,7 @@
             "action": "change",
             "userName": "Michael Adams"
         }
-    ]
+    ],
 
     "changes":[
         {
@@ -102,7 +102,7 @@
             "userName": "Alexander",
             "userAddress": "Cll 22 #10-03"
         }
-    ]
+    ],
 
     "loans" :[
         {
