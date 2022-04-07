@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
-import ContenedorView from './ContenedorView';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
@@ -11,7 +10,7 @@ axios.defaults.headers.get['Content-Type'] ='application/json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContenedorView/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
