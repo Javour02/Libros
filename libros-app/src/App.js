@@ -1,10 +1,10 @@
 import Navbar from './components/Navbar/Navbar';
-import VistaEspecifica from './components/VistaEspecifica/VistaEspecifica';
+import SpecificView from './components/SpecificView/SpecificView.js';
 import MainMenu from './pages/MainMenu/MainMenu';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import ExchangePage from './components/ExchangePage/ExchangePage';
 import AddReview from './components/AddReview/AddReview.js';
-import VentaLibros from './components/VentaLibros/VentaLibros.js';
+import SellBooks from './components/SellBooks/SellBooks.js';
 import LoansPage from './pages/Loans/Loans';
 import MyLoansPage from './pages/MyLoans/Loans';
 import './App.css';
@@ -82,11 +82,11 @@ class App extends Component {
           />
           <Route
             path="/book-view"
-            element={<VistaEspecifica />}
+            element={<SpecificView />}
           />
           <Route
             path="/sell-Books"
-            element={<VentaLibros />}
+            element={<SellBooks />}
           />
           <Route
             path="/add-review"

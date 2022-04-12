@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import portada from '../Images/Portada.png';
 import axios from '../AxiosComponent/AxiosComponent.js'
-import './VentaLibros.css';
+import './SellBooks.css';
 import usuario from '../Images/usuario-de-perfil.png';
 import ImageButton from '../ImageButton/ImageButton.js';
 import UserCard from '../UserCard/UserCard.js';

@@ -1,9 +1,9 @@
 .cardUser{
     width:fit-content;
     height: fit-content;
-    background-color: rgb(193, 220, 250);
     margin: 2vh 0px 2vh;
     border-radius: 10px;
+    border: 2px solid rgb(171, 190, 251);
     box-shadow: 5px 5px rgb(171, 190, 251);
 }
 

@@ -3,8 +3,9 @@ import portada from '../Images/Portada.png';
 import estrellas from '../Images/estrellas.jpg';
 import axios from '../AxiosComponent/AxiosComponent.js'
 import Comment from '../Comment/Comment.js';
-import './VistaEspecifica.css';
+import './SpecificView.css';
 import UserCard from '../UserCard/UserCard';
+import { Link } from 'react-router-dom';
 
 class vistaEspecifica extends Component{
     state = {
@@ -67,9 +68,11 @@ class vistaEspecifica extends Component{
                                 Rate this book
                                 <img className='estrellas' src={estrellas}/>
                             </div>
+                            <Link to="/add-review">
                             <button className='buttonAddReviewSpecificView'>
                                 Write a review
                             </button>
+                            </Link>
                         </div>
                         <div className='sinopsis'>
                             <h1>{this.state.actualItem[num].name}</h1>
@@ -89,9 +92,11 @@ class vistaEspecifica extends Component{
                                 Rate this book
                                 <img className='estrellas' src={estrellas}/>
                             </div>
+                            <Link to="/add-review">
                             <button className='buttonAddReviewSpecificView'>
                                 Write a review
                             </button>
+                            </Link>
                         </div>
                         <div className='sinopsis'>
                             <h1>{this.state.actualItem[0].name}</h1>
