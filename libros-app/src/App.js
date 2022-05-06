@@ -1,6 +1,10 @@
 import Navbar from './components/Navbar/Navbar';
-import VistaEspecifica from './components/VistaEspecifica/VistaEspecifica';
+import SpecificView from './components/SpecificView/SpecificView.js';
 import MainMenu from './pages/MainMenu/MainMenu';
+import PaymentPage from './components/PaymentPage/PaymentPage';
+import ExchangePage from './components/ExchangePage/ExchangePage';
+import AddReview from './components/AddReview/AddReview.js';
+import SellBooks from './components/SellBooks/SellBooks.js';
 import LoansPage from './pages/Loans/Loans';
 import MyLoansPage from './pages/MyLoans/Loans';
 import './App.css';
@@ -128,8 +132,16 @@ class App extends Component {
             path="/myloans"
             element={<MyLoansPage myLoans={this.state.myLoans} />}
           />
-
+          <Route
+            path="/payment"
+            element={<PaymentPage />}
+          />
+          <Route
+            path="/exchange"
+            element={<ExchangePage />}
+          />
         </Routes>
+
       </BrowserRouter>
 
     );

@@ -1,0 +1,53 @@
+.sinopsis2{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-right: 10vw;
+}
+
+.allReview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addReview{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.book-image2{
+    height: 40%;
+    width: 50%;
+}
+
+.justifyDesc{
+    text-align: justify;
+}
+
+.botonSubmitReview{
+    margin: 3vh;
+    width: 20vw;
+    align-self: flex-end;
+}
+
+.specific-Info2{
+    width: 90%;
+    padding: 3vw;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.photo2{
+    display: flex;
+    width: 40%;
+    padding-right: 4vw;
+    height: fit-content;
+    justify-content:end;
+    align-items: center;
+    margin-bottom: 30px;
+}

@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import img from '../../components/Images/SeisDeCuervos.jpg';
 import './MainMenu.css';
-import Notification from '../../components/MainMenuComponents/Notification';
-import Loan from '../../components/MainMenuComponents/Loan';
-import ChangeBook from '../../components/MainMenuComponents/ChangeBook';
+import Notification from '../../components/MainMenu/Notification';
+import Loan from '../../components/MainMenu/Loan';
+import ChangeBook from '../../components/MainMenu/ChangeBook';
 
 
 var mainMenu = (props) => {

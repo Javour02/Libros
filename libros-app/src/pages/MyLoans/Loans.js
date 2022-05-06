@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import img from '../../components/Images/SeisDeCuervos.jpg';
-import Loan from '../../components/LoansComponents/Loan';
+
+import Loan from '../../components/Loans/Loan';
 import { Link } from 'react-router-dom';
 import './Loans.css';
 

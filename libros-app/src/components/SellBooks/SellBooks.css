@@ -1,0 +1,65 @@
+
+.botonesFlecha{
+    width: 1.5%;
+    height: fit-content;
+}
+
+.ventaLibros{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marginTitle{
+    margin-right: 20vw;
+}
+
+.buttonVenta{
+    width: fit-content;
+    height: 100%;
+    padding: 15px;
+    border-radius: 15%;
+    box-shadow: 3px 3px #3e3e3e;
+}
+
+.titulo{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.h2VentaLibros{
+    margin: 0px;
+    padding-left: 30px;
+}
+
+h1{
+   margin: 0px; 
+}
+
+.nombreLibro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.librosScroll{
+    width: 95%;
+    padding: 20px;
+    height: fit-content;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.book-image{
+    height: fit-content;
+    width: 22%;
+}
