@@ -1,0 +1,23 @@
+.bookChange {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.bookChange--image {
+    background-color: #C4C4C4;
+    width: 150px;
+}
+
+.bookChange--name {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.bookChange--author {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.bookChange--Info {
+    width: 150px;
+}

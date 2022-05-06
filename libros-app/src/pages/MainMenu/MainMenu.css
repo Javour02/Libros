@@ -1,4 +1,4 @@
-.content {
+.main {
     align-items: left;
     text-align: center;
     width: 100%;
@@ -8,7 +8,7 @@
 
 }
 
-.currentlyLoans {
+.main--currentlyLoans {
     float: left;
     margin-left: 60px;
     text-align: center;
@@ -16,76 +16,14 @@
 
 }
 
-.notifications {
+.main--notifications {
     display: inline-block;
     width: 60%;
 
 }
 
-.changeBooks {
+.main--changeBooks {
     float: right;
     margin-right: 60px;
     width: 150px;
-}
-
-.bookImage {
-    background-color: #C4C4C4;
-    width: 150px;
-}
-
-.bookName {
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
-.bookauthor {
-    margin-top: 3px;
-    margin-bottom: 5px;
-}
-
-.dueDate {
-    margin-top: 0px;
-}
-
-.changeInfo {
-    width: 150px;
-}
-
-.bookLoan {
-    width: 150px;
-    margin-top: 30px;
-}
-
-.bookChange {
-    width: 150px;
-    margin-top: 30px;
-}
-
-/*Notification*/
-.notification {
-    background-color: #C4C4C4;
-    text-align: left;
-    align-items: center;
-    align-content: center;
-    margin-top: 30px;
-}
-
-.notificationInfo {
-    display: inline-block;
-    align-content: center;
-}
-
-.userNotificationImage {
-    width: 20px;
-    display: inline;
-}
-
-.Info {
-    display: inline;
-}
-
-.notificationImage {
-    width: 80px;
-    margin: 15px;
-    display: inline-block;
 }

@@ -5,6 +5,7 @@ import LoansPage from './pages/Loans/Loans';
 import MyLoansPage from './pages/MyLoans/Loans';
 import './App.css';
 import axios from "./instances/axiosInstance";
+import axios2 from "./instances/axiosComponent";
 
 import { Component } from 'react'
 
@@ -15,12 +16,16 @@ class App extends Component {
     notifications: [],
     loans: [],
     changes: [],
-    myLoans: []
+    myLoans: [],
+    books: [],
+    comments: [],
+    sellUsers: []
   };
   fetchTasks = async () => {
     try {
       var response = await axios.get("/notifications");
       const notifications = response.data.map((notification) => ({
+        bookId: notification.bookId,
         bookName: notification.bookName,
         bookAuthor: notification.bookAuthor,
         bookImage: notification.bookImage,
@@ -56,6 +61,38 @@ class App extends Component {
         dueDate: myLoan.dueDate
       }));
       this.setState({ myLoans });
+
+      response = await axios2.get("/Javour02/Libros/books");
+      const books = response.data.map((book) => ({
+        name: book.name,
+        author: book.author,
+        description: book.description,
+        image: book.image,
+        rating: book.rating,
+      }));
+      this.setState({ books });
+
+      response = await axios2.get("/Javour02/Libros/comments");
+      const comments = response.data.map((comment) => ({
+        idBook: comment.idBook,
+        userName: comment.name,
+        userImage: comment.image,
+        comment: comment.comment
+      }));
+      this.setState({ comments });
+
+      response = await axios2.get("/Javour02/Libros/sellUsers");
+      const sellUsers = response.data.map((sellUser) => ({
+        idBook: sellUser.id,
+        name: sellUser.name,
+        bookPrice: sellUser.price,
+        info: sellUser.info,
+        image: sellUser.image,
+        type: sellUser.type
+      }));
+      this.setState({ sellUsers });
+      
+      console.log(this.state);
     } catch (err) {
       console.error("Oh no!! an error!", err);
     }
@@ -73,21 +110,23 @@ class App extends Component {
 
           <Route
             path="/"
-
-            element={<MainMenu data={this.state}/>}
+            element={<MainMenu data={this.state} />}
             exact
           />
           <Route
-            path="/book-view"
-            element={<VistaEspecifica />}
+            path="/book-view/:bookIndex"
+            exact
+            element={<VistaEspecifica viewBook={(bookIndex) => this.viewBook(bookIndex)} 
+            comments={this.state.comments} users={this.state.sellUsers}/>}
+            
           />
           <Route
             path="/loans"
-            element={<LoansPage loans={this.state.loans}/>}
+            element={<LoansPage loans={this.state.loans} />}
           />
           <Route
             path="/myloans"
-            element={<MyLoansPage myLoans={this.state.myLoans}/>}
+            element={<MyLoansPage myLoans={this.state.myLoans} />}
           />
 
         </Routes>
@@ -95,6 +134,11 @@ class App extends Component {
 
     );
   }
+  viewBook = (bookIndex) => {
+    return this.state.books[bookIndex-1];
+  };
 }
+
+
 
 export default App;

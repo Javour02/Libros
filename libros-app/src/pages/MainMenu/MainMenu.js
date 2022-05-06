@@ -9,9 +9,9 @@ import ChangeBook from '../../components/MainMenuComponents/ChangeBook';
 
 var mainMenu = (props) => {
     return (
-        <div className="content">
-            <div className="currentlyLoans">
-                <Link to="/loans"><h2>Currently Loans</h2></Link>
+        <div className="main">
+            <div className="main--currentlyLoans">
+                <Link to="/loans"><h2 >Currently Loans</h2></Link>
                 {
                     props.data.loans.map(loan => (
                         <Loan loan={loan}></Loan>
@@ -19,7 +19,7 @@ var mainMenu = (props) => {
                 }
             </div>
 
-            <div className="notifications">
+            <div className="main--notifications">
                 <h2>Notifications</h2>
                 {
                      props.data.notifications.map(notification => (
@@ -28,7 +28,7 @@ var mainMenu = (props) => {
                 }
             </div>
 
-            <div className="changeBooks">
+            <div className="main--changeBooks">
                 <h2>Changed books</h2>
                 {
                      props.data.changes.map(change => (

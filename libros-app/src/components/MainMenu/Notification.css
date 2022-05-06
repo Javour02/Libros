@@ -1,0 +1,32 @@
+.notification {
+    background-color: #C4C4C4;
+    text-align: left;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.notification--content {
+    display: inline-block;
+    align-content: center;
+}
+
+.notification--info {
+    display: inline;
+}
+
+.notification--image {
+    width: 80px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.notification--bookAuthor {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.notification--bookName {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
