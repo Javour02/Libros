@@ -120,7 +120,7 @@ class App extends Component {
           <Route
             path="/book-view/:bookIndex"
             exact
-            element={<VistaEspecifica viewBook={(bookIndex) => this.viewBook(bookIndex)} 
+            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)} 
             comments={this.state.comments} users={this.state.sellUsers}/>}
             
           />

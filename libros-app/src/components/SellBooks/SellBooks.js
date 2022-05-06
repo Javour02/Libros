@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import portada from '../Images/Portada.png';
 import axios from '../AxiosComponent/AxiosComponent.js'
 import './SellBooks.css';
-import usuario from '../Images/usuario-de-perfil.png';
 import ImageButton from '../ImageButton/ImageButton.js';
 import UserCard from '../UserCard/UserCard.js';
 
@@ -23,7 +21,6 @@ class ventaLibros extends Component {
     }
 
     componentDidMount(){
-        let book = localStorage.getItem('currentBook');
         axios.get('/Javour02/Libros/books').then(response=>{
             var theBooks = response.data;
             this.setState({

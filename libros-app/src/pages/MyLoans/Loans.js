@@ -1,4 +1,3 @@
-
 import Loan from '../../components/Loans/Loan';
 import { Link } from 'react-router-dom';
 import './Loans.css';
