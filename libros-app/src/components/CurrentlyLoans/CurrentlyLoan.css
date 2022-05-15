@@ -1,0 +1,52 @@
+.loanComponent--bookImage{
+    width: 150px;
+    height: 220px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.loanComponent--information{
+    display: inline-block;
+    font-size: 16px;
+    text-align: left;
+}
+
+.loanComponent{
+    display: inline-block;
+    margin: 30px;
+    margin-top: 50px;
+    width: 410px;
+}
+
+.loanComponent--bookAuthor{
+    font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.loanComponent--bookName{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.loanComponent--button{
+    width: 180px;
+    height: 25px;
+    margin: 0px;
+    margin-top: 20px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #381302;
+    color: #F8EBCC;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    font-family: Stempel Schneidler Std ;
+    font-weight: lighter;
+}
+
+.loanComponent--button:hover{
+    background-color: #75420E;
+}

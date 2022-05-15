@@ -1,0 +1,30 @@
+.notification {
+    width: 150px;
+    margin: 20px;
+    text-align: left;
+    margin: 20px;
+    margin-top: 10px;
+    color: #381302;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.notification--image {
+    background-color: transparent;
+    width: 108px;
+    height: 165px;
+}
+
+.notification--bookAuthor {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.notification--bookName {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}

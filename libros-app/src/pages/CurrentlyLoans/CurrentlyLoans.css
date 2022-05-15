@@ -1,0 +1,28 @@
+.loan{
+    width: 95%;
+    display: inline-block;
+    margin: 30px;
+    color: #381302;
+    margin-top: 0px;
+}
+
+.loan--currentlyLoans{
+    display: inline-block;
+    font-size: 36px;
+    margin-left: 20px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.loan--myLoans{
+    font-size: 20px;
+    display: inline-block;
+    color: #381302;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.loan--header{
+    border-bottom: 5px solid #381302;
+}

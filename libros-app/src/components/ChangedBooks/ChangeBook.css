@@ -1,0 +1,33 @@
+.bookChange {
+    width: 150px;
+    margin: 20px;
+    margin-top: 10px;
+    text-align: left;
+    display: inline-block;
+    align-content: left;
+    vertical-align: top;
+}
+
+.bookChange--image {
+    background-color: transparent;
+    width: 108px;
+    height: 165px;
+}
+
+.bookChange--name {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bookChange--author {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.bookChange--Info {
+    font-size: 16px;
+}

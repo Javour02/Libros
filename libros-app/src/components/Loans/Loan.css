@@ -1,0 +1,34 @@
+.bookLoan {
+    width: 150px;
+    margin: 20px;
+    margin-top: 10px;
+    text-align: left;
+    display: inline-block;
+    align-content: left;
+    vertical-align: top;
+}
+
+.bookLoan--image {
+    background-color: transparent;
+    width: 108px;
+    height: 165px;
+}
+
+.bookLoan--name {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bookLoan--author {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.bookLoan--dueDate {
+    margin-top: 0px;
+    font-size: 16px;
+}

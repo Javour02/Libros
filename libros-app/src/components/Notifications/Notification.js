@@ -4,7 +4,7 @@ import './Notification.css';
 
 var Notification = (props) => {
     return (
-        <Link to={"/book-view/"+ props.notification.bookId}>
+        <Link to={"/book-view/"+ props.notification.bookId} style={{textDecoration: "none"}}>
             <div className="notification">
                 <img src={props.notification.bookImage} className="notification--image"></img>
                 <div className="notification--content">

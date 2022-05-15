@@ -1,21 +1,34 @@
-import Navbar from './components/Navbar/Navbar';
+import { Component } from 'react'
+import { connect } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//import AddReview from './components/AddReview/AddReview.js';
+//import SellBooks from './components/SellBooks/SellBooks.js';
 import SpecificView from './components/SpecificView/SpecificView.js';
 import MainMenu from './pages/MainMenu/MainMenu';
+import LogIn from './pages/LogIn/LogIn';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import ExchangePage from './components/ExchangePage/ExchangePage';
-import AddReview from './components/AddReview/AddReview.js';
-import SellBooks from './components/SellBooks/SellBooks.js';
-import LoansPage from './pages/Loans/Loans';
-import MyLoansPage from './pages/MyLoans/Loans';
+import LoansPage from './pages/CurrentlyLoans/CurrentlyLoans';
+import MyLoansPage from './pages/MyLoans/MyLoans';
+import NotFound from "./pages/NotFound/NotFound";
+import ShoppingCar from "./pages/ShoppingCar/ShoppingCar";
+
 import './App.css';
+
 import axios from "./instances/axiosInstance";
 import axios2 from "./instances/axiosComponent";
 
-import { Component } from 'react'
+import * as actionCreators from "./store/actions/";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 class App extends Component {
+
+  componentDidMount = () => {
+    this.props.onPersistAuthentication();
+    this.fetchTasks();
+  };
+
   state = {
     notifications: [],
     loans: [],
@@ -25,6 +38,7 @@ class App extends Component {
     comments: [],
     sellUsers: []
   };
+
   fetchTasks = async () => {
     try {
       var response = await axios.get("/notifications");
@@ -95,62 +109,74 @@ class App extends Component {
         type: sellUser.type
       }));
       this.setState({ sellUsers });
-      
+
       console.log(this.state);
     } catch (err) {
       console.error("Oh no!! an error!", err);
     }
   };
-  componentDidMount() {
-    this.fetchTasks();
-  }
+
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <Navbar />
-        </div>
         <Routes>
-
+          <Route
+            path="/MainMenu"
+            element={<MainMenu data={this.state} />}
+            exact
+          />
           <Route
             path="/"
-            element={<MainMenu data={this.state} />}
+            element={<LogIn />}
             exact
           />
           <Route
             path="/book-view/:bookIndex"
             exact
-            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)} 
-            comments={this.state.comments} users={this.state.sellUsers}/>}
-            
+            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)}
+              comments={this.state.comments} users={this.state.sellUsers} />}
+
           />
           <Route
-            path="/loans"
+            path="/CurrentlyLoans"
             element={<LoansPage loans={this.state.loans} />}
           />
           <Route
-            path="/myloans"
+            path="/MyLoans"
             element={<MyLoansPage myLoans={this.state.myLoans} />}
           />
           <Route
-            path="/payment"
+            path="/Payment"
             element={<PaymentPage />}
           />
           <Route
-            path="/exchange"
+            path="/Exchange"
             element={<ExchangePage />}
           />
+          <Route
+            path="/ShoppingCar"
+            element={<ShoppingCar />}
+          />
+          <Route path='*' element={<NotFound />} />
         </Routes>
-
       </BrowserRouter>
 
     );
   }
+
   viewBook = (bookIndex) => {
-    return this.state.books[bookIndex-1];
+    return this.state.books[bookIndex - 1];
   };
+  
 }
 
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onPersistAuthentication: () =>
+      dispatch(actionCreators.persistAuthentication()),
+  };
+};
 
-export default App;
+
+export default connect(null, mapDispatchToProps)(App);

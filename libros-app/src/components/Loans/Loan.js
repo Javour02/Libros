@@ -1,17 +1,13 @@
 import React from "react";
+import './Loan.css';
 
 var Loan = (props) => {
     return (
-        <div className="Books">
-            <img src={props.loan.bookImage} alt="" className="BookImage"></img>
-            <div className="Information">
-                <h3>{props.loan.bookName}</h3>
-                <h4>{props.loan.bookAuthor}</h4>
-                <p>Due date: {props.loan.dueDate}</p>
-                <p>Price per month: ${props.loan.pricePerMonth}</p>
-                <button>Already return this book</button>
-                <br></br><br></br><br></br>
-            </div>
+        <div className="bookLoan">
+            <img src={props.loan.bookImage} className="bookLoan--image"></img>
+            <h3 className="bookLoan--name">{props.loan.bookName}</h3>
+            <h4 className="bookLoan--author">{props.loan.bookAuthor}</h4>
+            <p className="bookLoan--dueDate">Due date: {props.loan.dueDate}</p>
         </div>
     );
 };

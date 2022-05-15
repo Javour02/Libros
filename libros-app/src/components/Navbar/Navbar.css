@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #9ec5e7;
+    background: linear-gradient(180deg, #AC793A 0%, #F8EBCC 100%);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -10,43 +10,26 @@
     align-items: center;
 }
 
-.divButtons{
+.navbar--divButtons{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    width: 40%;  
+    width: 10%;  
 }
 
-.botonNavbar{
-    margin: 0.5vw;
+.navbar--imageButton{
+    width: 60%;
+    margin: 30px;
 }
 
-button{
-    height: 100%;
-    width: 5vw;
-    text-decoration: none;
-    border-color: #9ec5e7;
-    background-color: #9ec5e7;
-    border-style: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-}
 
-.imagenBoton{
-    width: 70%;
-}
 
-img{
-    height: 50%;
-}
-
-.logo{
+.navbar--logo{
     height: 70px;
 }
 
-.searchbar{
+.navbar--searchbar{
     width: 50%;
     height: 35%;
     align-items: center;

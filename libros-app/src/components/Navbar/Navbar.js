@@ -1,28 +1,26 @@
 import React from 'react';
-import mensajes from '../Images/Mensajes.png';
-import notificaciones from '../Images/notificacion.png';
+import mensajes from '../Images/BooksIcon.png';
+import notificaciones from '../Images/ShoppingCar.png';
 import logo from '../Images/Logo.png';
-import usuario from '../Images/usuario-de-perfil.png';
+import usuario from '../Images/User.png';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-var navbar = () =>{
-    return(
+var navbar = () => {
+    return (
         <div className='navbar'>
-            <Link to="/"><img className='logo' src={logo}/></Link>
-            <input className='searchbar' type="search"></input>
-            <div className='divButtons'>
-                <Link to="/loans"><button className='botonNavbar'>loans</button></Link>
-                <button className='botonNavbar'>my books</button>
-                <button className='botonNavbar'>
-                    <img className="imagenBoton" src={mensajes}/>
-                </button>
-                <button className='botonNavbar'>
-                    <img className="imagenBoton" src={notificaciones}/>
-                </button>
-                <button className='botonNavbar'>
-                    <img className="imagenBoton" src={usuario}/>
-                </button>
+            <Link to="/"><img className='navbar--logo' src={logo} /></Link>
+            <input className='navbar--searchbar' type="search"></input>
+            <div className='navbar--divButtons'>
+                <Link to="/ShoppingCar">
+                    <img className="navbar--imageButton" src={mensajes} />
+                </Link>
+                <Link to="/ShoppingCar">
+                    <img className="navbar--imageButton" src={notificaciones} />
+                </Link>
+                <Link to="/ShoppingCar">
+                    <img className="navbar--imageButton" src={usuario} />
+                    </Link>
             </div>
         </div>
     );

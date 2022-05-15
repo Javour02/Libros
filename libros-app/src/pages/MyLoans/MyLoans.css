@@ -1,0 +1,39 @@
+.myLoan--currentlyLoans{
+    font-size: 20px;
+    display: inline-block;
+    color: #381302;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.myLoan--myLoans{
+    display: inline-block;
+    font-size: 36px;
+    margin-left: 20px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.myLoan--header{
+    border-bottom: 5px solid #381302;
+}
+
+.myLoan{
+    width: 95%;
+    display: inline-block;
+    margin: 30px;
+    color: #381302;
+    margin-top: 20px;
+}
+
+.Books{
+    margin-top: 40px;
+    display: inline-block;
+    margin-right:40px;
+    margin-left:40px;
+}
+
+.loans{
+    text-align: center;
+}

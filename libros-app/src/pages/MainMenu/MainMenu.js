@@ -1,42 +1,49 @@
 import { Link } from 'react-router-dom';
+
+import Notification from '../../components/Notifications/Notification';
+import Loan from '../../components/Loans/Loan';
+import ChangeBook from '../../components/ChangedBooks/ChangeBook';
+import Navbar from '../../components/Navbar/Navbar';
+import BackPhotoBooks from '../../components/Images/BackPhotoBooks.png';
+
 import './MainMenu.css';
-import Notification from '../../components/MainMenu/Notification';
-import Loan from '../../components/MainMenu/Loan';
-import ChangeBook from '../../components/MainMenu/ChangeBook';
 
 
 var mainMenu = (props) => {
     return (
-        <div className="main">
-            <div className="main--currentlyLoans">
-                <Link to="/loans"><h2 >Currently Loans</h2></Link>
-                {
-                    props.data.loans.map(loan => (
-                        <Loan loan={loan}></Loan>
-                    ))
-                }
-            </div>
+        <div>
+            <Navbar />
+            <img className='main--photo' src={BackPhotoBooks}></img>
+            <div className="main">
+                <div className="main--notifications">
+                    <h2 className='main--text'>Notifications</h2>
+                        {
+                            props.data.notifications.map(notification => (
+                                <Notification notification={notification}></Notification>
+                            ))
+                        }
+                </div>
 
-            <div className="main--notifications">
-                <h2>Notifications</h2>
-                {
-                     props.data.notifications.map(notification => (
-                        <Notification notification={notification}></Notification>
-                    ))
-                }
-            </div>
+                <div className="main--currentlyLoans">
+                    <Link to="/CurrentlyLoans" style={{ textDecoration: "none" }}><h2 className='main--text'>Currently Loans</h2></Link>
+                    {
+                        props.data.loans.map(loan => (
+                            <Loan loan={loan}></Loan>
+                        ))
+                    }
+                </div>
 
-            <div className="main--changeBooks">
-                <h2>Changed books</h2>
-                {
-                     props.data.changes.map(change => (
-                        <ChangeBook change={change}></ChangeBook>
-                    ))
-                }
+                <div className="main--changeBooks">
+                    <h2 className='main--text'>Changed books</h2>
+                    {
+                        props.data.changes.map(change => (
+                            <ChangeBook change={change}></ChangeBook>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     );
-
 }
 
 export default mainMenu;
