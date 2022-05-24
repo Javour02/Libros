@@ -1,5 +1,5 @@
 import React from 'react'
-import portada from '../Images/Portada.png';
+import portada from '../../Images/Portada.png';
 import './PaymentPage.css';
 
 

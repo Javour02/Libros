@@ -1,8 +1,8 @@
 import React from 'react';
-import mensajes from '../Images/BooksIcon.png';
-import notificaciones from '../Images/ShoppingCar.png';
-import logo from '../Images/Logo.png';
-import usuario from '../Images/User.png';
+import mensajes from '../../Images/BooksIcon.png';
+import notificaciones from '../../Images/ShoppingCar.png';
+import logo from '../../Images/Logo.png';
+import usuario from '../../Images/User.png';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 

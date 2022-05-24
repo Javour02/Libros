@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import * as actionCreators from "../../store/actions/";
+import validator from "validator";
+
 import { connect } from "react-redux";
 import './LogIn.css';
 
 class LogIn extends Component {
     state = {
         isUserLoggedIn: this.props.isUserLoggedIn,
-        emailAddress: "",
+        userName: "",
         password: "",
-        isError: false,
+        isError: this.props.errorMessageAuth,
+        errorMessage: this.props.errorMessage, 
     };
 
-    componentDidMount() {
-        if (this.state.isUserLoggedIn) {
-            this.props.onFetchPosts();
-        }
+    componentDidMount(){
     }
 
     componentDidUpdate() {
         if (this.state.isUserLoggedIn) {
-            this.props.history.replace("/");
+            this.props.history.replace("/MainMenu");
         }
     }
 
@@ -42,20 +42,40 @@ class LogIn extends Component {
         return (
             <div className="logIn">
                 <h1 className="logIn--title">Log in</h1>
-                <input type="email" className="logIn--input" placeholder="Email address" value={this.state.emailAddress}
-                    onChange={(event) => {
-                        this.updateLoginInfo(event, "emailAddress");
-                    }}></input><br />
-                <input type="password" className="logIn--input" placeholder="Password" value={this.state.password}
-                    onChange={(event) => {
-                        this.updateLoginInfo(event, "password");
-                    }}></input><br />
+                <input type="email"
+                className="logIn--input"
+                placeholder="Email address"
+                value={this.state.emailAddress}
+                onChange={(event) => {
+                    this.updateLoginInfo(event, "userName");
+                }}>
+                </input>
+                <br />
+                <input type="password"
+                className="logIn--input" 
+                placeholder="Password" 
+                value={this.state.password}
+                onChange={(event) => {
+                    this.updateLoginInfo(event, "password");
+                }}>
+                </input>
+                <br />
                 <button className="logIn--button" onClick={this.submitLoginForm}>Log in</button>
-
                 <p className="logIn--message">don't have an account?</p>
                 <button className="logIn--button" onClick={this.submitSignUpForm}>Sign up</button>
+                {this.showErrorMessage()}
             </div>
         );
+    }
+
+    showErrorMessage(){
+        let content = <p>""</p>;
+
+        if (this.props.errorMessageAuth) {
+        content = <p>{this.props.errorMessage}</p>;
+        }
+
+        return content;
     }
 
     updateLoginInfo = (event, type) => {
@@ -64,26 +84,28 @@ class LogIn extends Component {
         };
 
         updatedLoginInfo[type] = event.target.value;
-
+        console.log(updatedLoginInfo);
         this.setState({
-            emailAddress: updatedLoginInfo.emailAddress,
+            userName: updatedLoginInfo.userName,
             password: updatedLoginInfo.password,
         });
     };
 
     submitLoginForm = () => {
         const userData = {
-            email: this.state.emailAddress,
+            email: this.state.userName,
             password: this.state.password,
         };
 
-        this.props.onUserLogin(userData, () => {
-            this.props.history.push("/");
-        });
-
-        this.setState({
-            isError: this.props.errorMessageAuth,
-        });
+        if(validator.isEmail(userData.email) && userData.password!==""){
+            this.props.onUserLogin(userData, () => {
+                this.props.history.push("/");
+            });
+        }else{
+            let isError = true;
+            let message = "Datos invalidos. Llene la información correctamente para continuar";
+            this.props.onError(isError, message);
+        }
     };
 
     updateSignUpInfo = (event, type) => {
@@ -105,13 +127,15 @@ class LogIn extends Component {
             password: this.state.password,
         };
 
-        this.setState({
-            isError: this.props.errorMessageAuth,
-        });
-
-        this.props.onUserSignUp(userData, () => {
-            this.props.history.push("/MainMenu");
-        });
+        if(validator.isEmail(userData.email) && userData.password!==""){
+            this.props.onUserSignUp(userData, () => {
+                this.props.history.push("/MainMenu");
+            });
+        }else{
+            let isError = true;
+            let message = "Datos invalidos. Llene la información correctamente para continuar";
+            this.props.onError(isError, message);
+        }
     };
 }
 
@@ -119,6 +143,8 @@ class LogIn extends Component {
 const mapStateToProps = (state) => {
     return {
         isUserLoggedIn: state.authenticationStore.isUserLoggedIn,
+        errorMessageAuth: state.authenticationStore.errorMessageAuth,
+        errorMessage: state.authenticationStore.errorMessage,
     };
 };
 
@@ -128,6 +154,8 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(actionCreators.logIn(authData, onSuccessCallback)),
         onUserSignUp: (authData, onSuccessCallback) =>
             dispatch(actionCreators.signUp(authData, onSuccessCallback)),
+        onError: (isError, message) =>
+            dispatch(actionCreators.showError(isError, message)),
     };
 };
 

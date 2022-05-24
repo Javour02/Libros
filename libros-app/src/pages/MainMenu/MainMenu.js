@@ -4,7 +4,7 @@ import Notification from '../../components/Notifications/Notification';
 import Loan from '../../components/Loans/Loan';
 import ChangeBook from '../../components/ChangedBooks/ChangeBook';
 import Navbar from '../../components/Navbar/Navbar';
-import BackPhotoBooks from '../../components/Images/BackPhotoBooks.png';
+import BackPhotoBooks from '../../Images/BackPhotoBooks.png';
 
 import './MainMenu.css';
 

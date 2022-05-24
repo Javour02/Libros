@@ -1,6 +1,6 @@
 import React from "react";
 import './ShoppingItem.css';
-import Book from '../Images/BookImage.png';
+import Book from '../../Images/BookImage.png';
 
 
 var ShoppingItem = () => {

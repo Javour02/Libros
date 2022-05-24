@@ -1,1 +1,1 @@
-export { logIn, logOut, signUp, persistAuthentication } from "./authentication";
+export { logIn, logOut, signUp, persistAuthentication, showError } from "./authentication";

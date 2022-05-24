@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //import AddReview from './components/AddReview/AddReview.js';
 //import SellBooks from './components/SellBooks/SellBooks.js';
-import SpecificView from './components/SpecificView/SpecificView.js';
+import SpecificView from './pages/SpecificView/SpecificView.js';
 import MainMenu from './pages/MainMenu/MainMenu';
 import LogIn from './pages/LogIn/LogIn';
-import PaymentPage from './components/PaymentPage/PaymentPage';
-import ExchangePage from './components/ExchangePage/ExchangePage';
+import PaymentPage from './pages/PaymentPage/PaymentPage';
+import ExchangePage from './pages/ExchangePage/ExchangePage';
 import LoansPage from './pages/CurrentlyLoans/CurrentlyLoans';
 import MyLoansPage from './pages/MyLoans/MyLoans';
 import NotFound from "./pages/NotFound/NotFound";

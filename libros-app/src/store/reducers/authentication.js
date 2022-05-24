@@ -10,6 +10,7 @@ const initialState = {
   },
   loadingAuth: false,
   errorMessageAuth: false,
+  errorMessage: "",
 };
 
 const login = (state, action) => {
@@ -45,6 +46,19 @@ const logOut = (state, action) => {
   });
 };
 
+const error = (state, action) => {
+  return updateObject(state, {
+    isUserLoggedIn: false,
+    userLoggedIn: {
+      userName: "",
+      idToken: "",
+      localId: "",
+    },
+    errorMessageAuth: action.err,
+    errorMessage: action.mes,
+  });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.LOGIN:
@@ -53,6 +67,8 @@ const reducer = (state = initialState, action) => {
       return signUp(state, action);
     case actionTypes.LOG_OUT:
       return logOut(state, action);
+    case actionTypes.ERROR:
+      return error(state, action);
     default:
       return state;
   }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
-import BackPhotoBooks from '../../components/Images/BackPhotoCoffee.png';
+import BackPhotoBooks from '../../Images/BackPhotoCoffee.png';
 import ShoppingItem from '../../components/ShoppingItem/ShoppingItem';
 
 

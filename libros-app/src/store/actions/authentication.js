@@ -1,7 +1,7 @@
 import * as actionTypes from "./actionTypes";
 import axios from "../../instances/axios-authentication";
 
-const API_KEY = "AIzaSyCTfVO1Eoqgxjqrvx9ialseV-c2AMwF7ic";
+const API_KEY = "AIzaSyDPMj5U8NoMmug0gR-Z2gO_KZWWOSdMnNQ";
 
 const saveSession = (userName, token, localId) => {
   return {
@@ -53,9 +53,18 @@ export const logIn = (authData, onSuccessCallback) => {
       })
       .catch((error) => {
         console.log(error);
+        dispatch(showError(true, error.message));
       });
   };
 };
+
+export const showError = (isError, message)=>{
+  return{
+    type: actionTypes.ERROR,
+    err: isError,
+    mes: message,
+  }
+}
 
 export const signUp = (authData, onSuccessCallback) => {
   return (dispatch) => {
@@ -85,6 +94,7 @@ export const signUp = (authData, onSuccessCallback) => {
       })
       .catch((error) => {
         console.log(error);
+        dispatch(showError(true, error.error.message));
       });
   };
 };

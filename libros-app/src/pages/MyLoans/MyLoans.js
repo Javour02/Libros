@@ -1,7 +1,7 @@
 import Loan from '../../components/CurrentlyLoans/CurrenlyLoan';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
-import BackPhotoBooks from '../../components/Images/BackPhotoBooks2.png';
+import BackPhotoBooks from '../../Images/BackPhotoBooks2.png';
 import './MyLoans.css';
 
 var mainMenu = (props) => {

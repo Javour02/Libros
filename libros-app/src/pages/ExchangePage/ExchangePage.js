@@ -1,6 +1,6 @@
 import React from 'react'
-import flechas from '../Images/doubleSidedArrow.png';
-import portada from '../Images/Portada.png';
+import flechas from '../../Images/doubleSidedArrow.png';
+import portada from '../../Images/Portada.png';
 import './ExchangePage.css';
 
 const ExchangePage = () => {

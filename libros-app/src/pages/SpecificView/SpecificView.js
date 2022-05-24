@@ -1,8 +1,8 @@
 import React from 'react';
-import estrellas from '../Images/estrellas.jpg';
-import Comment from '../Comment/Comment.js';
+import estrellas from '../../Images/estrellas.jpg';
+import Comment from '../../components/Comment/Comment.js';
 import './SpecificView.css';
-import UserCard from '../UserCard/UserCard';
+import UserCard from '../../components/UserCard/UserCard';
 import { useParams } from 'react-router-dom';
 
 

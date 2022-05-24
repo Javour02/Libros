@@ -1,6 +1,6 @@
 import axios from "../AxiosComponent/AxiosComponent.js";
 import { Component } from "react";
-import estrellas from '../Images/estrellas.jpg';
+import estrellas from '../../Images/estrellas.jpg';
 import './AddReview.css'
 
 class AddReview extends Component{
