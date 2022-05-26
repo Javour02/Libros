@@ -7,6 +7,7 @@ const initialState = {
   changes: [],
   myLoans: [],
   books: [],
+  shoppingCar: [],
   loadingNotifications: false,
 };
 
@@ -40,6 +41,10 @@ const fetchBooks = (state, action) => {
   return updateObject(state, { books: action.payload.books });
 };
 
+const fetchShoppingCar = (state, action) => {
+  return updateObject(state, { shoppingCar: action.payload.shoppingCar });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_NOTIFICATIONS:
@@ -52,6 +57,8 @@ const reducer = (state = initialState, action) => {
       return fetchMyLoans(state, action);
     case actionTypes.FETCH_BOOKS:
       return fetchBooks(state, action);
+    case actionTypes.FETCH_SHOPPINGCAR:
+      return fetchShoppingCar(state, action);
     default:
       return state;
   }

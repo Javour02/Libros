@@ -172,3 +172,58 @@ export const returnBooks = (returns) => {
       });*/
   };
 };
+
+
+const storeLoan = (loan) => {
+  return {
+    type: actionTypes.ADD_LOAN,
+    payload: {
+      loan: loan,
+    },
+  };
+};
+
+export const addLoan = (loan) => {
+  return (dispatch) => {
+
+    axios
+      .post("/shoppingCar.json", loan)
+      .then((response) => {
+        console.log(response);
+
+        dispatch(storeLoan(loan));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
+
+
+const loadShoppingCar = (shoppingCar) => {
+  return {
+    type: actionTypes.FETCH_SHOPPINGCAR,
+    payload: {
+      shoppingCar: shoppingCar,
+    },
+  };
+};
+
+export const fetchShoppingCar = () => {
+  return (dispatch) => {
+    axios
+      .get("/shoppingCar.json")
+      .then((response) => {
+        console.log(response);
+
+        const shoppingCar = Object.values(response.data).map((item) => {
+          
+          return { ...item };
+        });
+        dispatch(loadShoppingCar(shoppingCar));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};

@@ -18,9 +18,6 @@ import ShoppingCar from "./pages/ShoppingCar/ShoppingCar";
 
 import './App.css';
 
-import axios from "./instances/axiosInstance";
-import axios2 from "./instances/axiosComponent";
-
 import * as actionCreators from "./store/actions/";
 
 
@@ -85,7 +82,7 @@ class App extends Component {
           <Route
             path="/book-view/:bookIndex"
             exact
-            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)} />}
+            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)} addLoan={this.addLoan}/>}
 
           />
           <Route
@@ -94,7 +91,7 @@ class App extends Component {
           />
           <Route
             path="/MyLoans"
-            element={<MyLoansPage/>}
+            element={<MyLoansPage />}
           />
           <Route
             path="/Payment"
@@ -117,6 +114,10 @@ class App extends Component {
 
   viewBook = (bookIndex) => {
     return this.state.books[bookIndex - 1];
+  };
+
+  addLoan = (newLoanInfo) => {
+    this.props.onAddLoan(newLoanInfo);
   };
 
 }
@@ -145,6 +146,8 @@ const mapDispatchToProps = (dispatch) => {
     onFetchChanges: () => dispatch(actionCreators.fetchChanges()),
     onReturnBooks: (bookName) => dispatch(actionCreators.returnBooks(bookName)),
     onFetchBooks: () => dispatch(actionCreators.fetchBooks()),
+    onAddLoan: (loan) => dispatch(actionCreators.addLoan(loan)),
+
 
   };
 };

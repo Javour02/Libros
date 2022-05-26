@@ -100,6 +100,8 @@ class MainMenu extends Component {
         //this.props.onReturnBook(bookName);
     };
 
+    
+
     onUserLoggedOut() {
         return (
             <div style={{ textAlign: "center" }}>
@@ -131,7 +133,6 @@ const mapDispatchToProps = (dispatch) => {
         onFetchChanges: () => dispatch(actionCreators.fetchChanges()),
         onReturnBooks: (bookName) => dispatch(actionCreators.returnBooks(bookName)),
         onFetchBooks: () => dispatch(actionCreators.fetchBooks()),
-
     };
 };
 

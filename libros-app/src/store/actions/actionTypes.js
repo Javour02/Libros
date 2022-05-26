@@ -8,4 +8,7 @@ export const FETCH_LOANS = "FETCH_LOANS";
 export const FETCH_CHANGES = "FETCH_CHANGES";
 export const FETCH_MYLOANS = "FETCH_MYLOANS";
 export const FETCH_BOOKS = "FETCH_BOOKS";
+export const FETCH_SHOPPINGCAR = "FETCH_SHOPPINGCAR";
+export const ADD_LOAN = "ADD_LOAN";
+
 export const RETURN_BOOKS = "RETURN_BOOKS";
