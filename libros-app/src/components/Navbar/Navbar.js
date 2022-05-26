@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import mensajes from '../../Images/BooksIcon.png';
 import notificaciones from '../../Images/ShoppingCar.png';
 import logo from '../../Images/Logo.png';
 import usuario from '../../Images/User.png';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import * as actionCreators from "../../store/actions/";
 
-var navbar = () => {
-    return (
-        <div className='navbar'>
-            <Link to="/"><img className='navbar--logo' src={logo} /></Link>
+class Navbar extends Component {
+    render (){
+        return (
+            <div className='navbar'>
+            <Link to="/MainMenu"><img className='navbar--logo' src={logo} /></Link>
             <input className='navbar--searchbar' type="search"></input>
             <div className='navbar--divButtons'>
                 <Link to="/ShoppingCar">
@@ -18,12 +22,24 @@ var navbar = () => {
                 <Link to="/ShoppingCar">
                     <img className="navbar--imageButton" src={notificaciones} />
                 </Link>
-                <Link to="/ShoppingCar">
-                    <img className="navbar--imageButton" src={usuario} />
-                    </Link>
+                <button>
+                <img className="navbar--imageButton" src={usuario} onClick={this.props.onLogOut}/>
+
+                </button>               
             </div>
         </div>
-    );
+        );
+    }
 }
 
-export default navbar;
+const mapDispatchToProps = (dispatch) => {
+    console.log("paso");
+    return {
+      onLogOut: () => dispatch(actionCreators.logOut()),
+    };
+  };
+
+
+
+
+  export default connect( mapDispatchToProps)(Navbar);

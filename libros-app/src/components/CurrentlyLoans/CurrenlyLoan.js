@@ -3,6 +3,7 @@ import './CurrentlyLoan.css';
 
 var Loan = (props) => {
     return (
+        
         <div className="loanComponent">
             <img src={props.loan.bookImage} className="loanComponent--bookImage"></img>
             <div className="loanComponent--information">

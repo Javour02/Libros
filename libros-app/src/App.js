@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SpecificView from './pages/SpecificView/SpecificView.js';
 import MainMenu from './pages/MainMenu/MainMenu';
 import LogIn from './pages/LogIn/LogIn';
+import MyBooks from './pages/MyBooks/MyBooks';
+
 import PaymentPage from './pages/PaymentPage/PaymentPage';
 import ExchangePage from './pages/ExchangePage/ExchangePage';
 import LoansPage from './pages/CurrentlyLoans/CurrentlyLoans';
@@ -26,95 +28,40 @@ class App extends Component {
 
   componentDidMount = () => {
     this.props.onPersistAuthentication();
-    this.fetchTasks();
+    if (this.state.isUserLoggedIn) {
+      this.props.onFetchNotifications();
+      this.props.onFetchLoans();
+      this.props.onFetchChanges();
+      this.props.onFetchBooks();
+    }
   };
 
   state = {
-    notifications: [],
-    loans: [],
-    changes: [],
-    myLoans: [],
-    books: [],
-    comments: [],
-    sellUsers: []
+    isUserLoggedIn: this.props.isUserLoggedIn,
+    notifications: this.props.notifications,
+    loans: this.props.loans,
+    changes: this.props.changes,
+    books: this.props.books,
   };
 
-  fetchTasks = async () => {
-    try {
-      var response = await axios.get("/notifications");
-      const notifications = response.data.map((notification) => ({
-        bookId: notification.bookId,
-        bookName: notification.bookName,
-        bookAuthor: notification.bookAuthor,
-        bookImage: notification.bookImage,
-        action: notification.action,
-        userName: notification.userName
-      }));
-      this.setState({ notifications });
+  componentWillReceiveProps(nextState) {
+    this.setState({
+      isUserLoggedIn: nextState.isUserLoggedIn,
+      notifications: nextState.notifications,
+      loans: nextState.loans,
+      changes: nextState.changes,
+      books: nextState.books,
+    });
+  }
 
-      response = await axios.get("/loans");
-      const loans = response.data.map((loan) => ({
-        bookName: loan.bookName,
-        bookAuthor: loan.bookAuthor,
-        bookImage: loan.bookImage,
-        dueDate: loan.dueDate
-      }));
-      this.setState({ loans });
-
-      response = await axios.get("/changes");
-      const changes = response.data.map((change) => ({
-        bookName: change.bookName,
-        bookAuthor: change.bookAuthor,
-        bookImage: change.bookImage,
-        userName: change.userName,
-        userAddress: change.userAddress
-      }));
-      this.setState({ changes });
-
-      response = await axios.get("/myLoans");
-      const myLoans = response.data.map((myLoan) => ({
-        bookName: myLoan.bookName,
-        bookAuthor: myLoan.bookAuthor,
-        bookImage: myLoan.bookImage,
-        dueDate: myLoan.dueDate
-      }));
-      this.setState({ myLoans });
-
-      response = await axios2.get("/Javour02/Libros/books");
-      const books = response.data.map((book) => ({
-        name: book.name,
-        author: book.author,
-        description: book.description,
-        image: book.image,
-        rating: book.rating,
-      }));
-      this.setState({ books });
-
-      response = await axios2.get("/Javour02/Libros/comments");
-      const comments = response.data.map((comment) => ({
-        idBook: comment.idBook,
-        userName: comment.name,
-        userImage: comment.image,
-        comment: comment.comment
-      }));
-      this.setState({ comments });
-
-      response = await axios2.get("/Javour02/Libros/sellUsers");
-      const sellUsers = response.data.map((sellUser) => ({
-        idBook: sellUser.id,
-        name: sellUser.name,
-        bookPrice: sellUser.price,
-        info: sellUser.info,
-        image: sellUser.image,
-        type: sellUser.type
-      }));
-      this.setState({ sellUsers });
-
-      console.log(this.state);
-    } catch (err) {
-      console.error("Oh no!! an error!", err);
+  componentWillUpdate(nextProps, nextState) {
+    if (!this.state.isUserLoggedIn && nextState.isUserLoggedIn) {
+      this.props.onFetchNotifications();
+      this.props.onFetchLoans();
+      this.props.onFetchChanges();
+      this.props.onFetchBooks();
     }
-  };
+  }
 
   render() {
     return (
@@ -122,7 +69,7 @@ class App extends Component {
         <Routes>
           <Route
             path="/MainMenu"
-            element={<MainMenu data={this.state} />}
+            element={<MainMenu />}
             exact
           />
           <Route
@@ -131,19 +78,23 @@ class App extends Component {
             exact
           />
           <Route
+            path="/MyBooks"
+            element={<MyBooks />}
+            exact
+          />
+          <Route
             path="/book-view/:bookIndex"
             exact
-            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)}
-              comments={this.state.comments} users={this.state.sellUsers} />}
+            element={<SpecificView viewBook={(bookIndex) => this.viewBook(bookIndex)} />}
 
           />
           <Route
             path="/CurrentlyLoans"
-            element={<LoansPage loans={this.state.loans} />}
+            element={<LoansPage />}
           />
           <Route
             path="/MyLoans"
-            element={<MyLoansPage myLoans={this.state.myLoans} />}
+            element={<MyLoansPage/>}
           />
           <Route
             path="/Payment"
@@ -167,16 +118,36 @@ class App extends Component {
   viewBook = (bookIndex) => {
     return this.state.books[bookIndex - 1];
   };
-  
+
 }
 
+const mapStateToProps = (state) => {
+  return {
+    isUserLoggedIn: state.authenticationStore.isUserLoggedIn,
+    userLoggedIn: state.authenticationStore.userLoggedIn,
+    notifications: state.notificationsStore.notifications,
+    loadingNotifications: state.notificationsStore.loadingNotifications,
+    loans: state.loansStore.loans,
+    loadingLoans: state.loansStore.loadingLoans,
+    changes: state.changesStore.changes,
+    loadingChanges: state.changesStore.loadingChanges,
+    books: state.booksStore.books,
+    loadingBooks: state.booksStore.loadingBooks,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onPersistAuthentication: () =>
       dispatch(actionCreators.persistAuthentication()),
+    onFetchNotifications: () => dispatch(actionCreators.fetchNotifications()),
+    onFetchLoans: () => dispatch(actionCreators.fetchLoans()),
+    onFetchChanges: () => dispatch(actionCreators.fetchChanges()),
+    onReturnBooks: (bookName) => dispatch(actionCreators.returnBooks(bookName)),
+    onFetchBooks: () => dispatch(actionCreators.fetchBooks()),
+
   };
 };
 
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

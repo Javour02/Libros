@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as actionCreators from "../../store/actions/";
 import validator from "validator";
+import Navbar from '../../components/Navbar/Navbar';
 
 import { connect } from "react-redux";
 import './LogIn.css';
@@ -19,7 +20,7 @@ class LogIn extends Component {
 
     componentDidUpdate() {
         if (this.state.isUserLoggedIn) {
-            this.props.history.replace("/MainMenu");
+            this.props.history.replace("/");
         }
     }
 
@@ -35,7 +36,7 @@ class LogIn extends Component {
     }
 
     onUserLoggedIn() {
-        return (<h1>Entraste</h1>);
+        return (<Navbar />);
     }
 
     onUserLoggedOut() {
@@ -129,7 +130,7 @@ class LogIn extends Component {
 
         if(validator.isEmail(userData.email) && userData.password!==""){
             this.props.onUserSignUp(userData, () => {
-                this.props.history.push("/MainMenu");
+                this.props.history.push("/");
             });
         }else{
             let isError = true;

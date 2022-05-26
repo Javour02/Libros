@@ -36,6 +36,7 @@ const signUp = (state, action) => {
 };
 
 const logOut = (state, action) => {
+  console.log("he hecho log out creo");
   return updateObject(state, {
     isUserLoggedIn: false,
     userLoggedIn: {

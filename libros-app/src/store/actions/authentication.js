@@ -120,6 +120,7 @@ export const persistAuthentication = () => {
 };
 
 export const logOut = () => {
+  console.log("he hecho log out creo x2");
   return {
     type: actionTypes.LOG_OUT,
   };
