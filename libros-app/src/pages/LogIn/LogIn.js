@@ -14,7 +14,7 @@ class LogIn extends Component {
         userName: "",
         password: "",
         isError: this.props.errorMessageAuth,
-        errorMessage: this.props.errorMessage, 
+        errorMessage: "", 
     };
 
     componentDidMount(){
@@ -33,16 +33,6 @@ class LogIn extends Component {
     }
 
     render() {
-        return this.state.isUserLoggedIn
-            ? this.onUserLoggedIn()
-            : this.onUserLoggedOut();
-    }
-
-    onUserLoggedIn() {
-        return (<Navbar />);
-    }
-
-    onUserLoggedOut() {
         return (
             <div className="logIn">
                 <h1 className="logIn--title">Log in</h1>
@@ -111,7 +101,7 @@ class LogIn extends Component {
 
         if(validator.isEmail(userData.email) && userData.password!==""){
             this.props.onUserLogin(userData, () => {
-                this.props.history.push("/");
+                //this.props.history.push("/");
             });
         }else{
             let isError = true;

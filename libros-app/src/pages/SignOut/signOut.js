@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 class SignOut extends Component {
     state = {
         isUserLoggedIn: this.props.isUserLoggedIn,
+        gotomenu: false,
     };
 
     componentDidMount(){
@@ -28,13 +29,11 @@ class SignOut extends Component {
     render(){
         return (
             <div className="sign-out">
-                <t1>Estas seguro de salir?</t1>
+                {this.signOutDefinitively()}
+                <p>Ha salido correctamente</p>
                 <div className="signOut-buttons">
                     <Link to="/">
-                    <button onClick={this.signOutDefinitively()}>SI</button>
-                    </Link>
-                    <Link to="/MainMenu">
-                    <button>NO</button>
+                        <button>Volver</button>
                     </Link>
                 </div>
             </div>
@@ -54,8 +53,8 @@ class SignOut extends Component {
 
     const mapDispatchToProps = (dispatch) => {
         return {
-            onSignOut: (authData, onSuccessCallback) =>
-                dispatch(actionCreators.logOut(authData)),
+            onSignOut: () =>
+                dispatch(actionCreators.logOut()),
         };
     };
 
