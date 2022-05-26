@@ -65,19 +65,28 @@ class ShoppingCar extends Component {
                             <h3 className='shoppingCar--subtotalItems'>Subtotal ({this.state.shoppingCar.length} items):</h3>
                             <h3 className='shoppingCar--subtotalPrice'>${totalPrice}</h3>
                             <br />
-                            <button className='shoppingCar--subtotalButton'>Accept</button>
+                            <button className='shoppingCar--subtotalButton' onClick={this.buyBooks}>Accept</button>
                         </div>
                     </div>
                     <div className='shoppingCar--resume'>
                         <h2 className='shoppingCar--shoppingResume'>Shopping resume</h2>
                         <h3 className='shoppingCar--resumeItems'>Total ({this.state.shoppingCar.length} items):</h3>
                         <h3 className='shoppingCar--resumeTotal'>${totalPrice}</h3>
-                        <button className='shoppingCar--resumeButton'>Accept</button>
+                        <button className='shoppingCar--resumeButton' onClick={this.buyBooks}>Accept</button>
                     </div>
                 </div>
             </div>
         );
     }
+
+    buyBooks = () => {
+        this.props.onBuyBooks(this.state.shoppingCar);
+        this.props.onDeleteBooks();
+        alert("Transaction correct");
+        this.setState({
+            shoppingCar: [],
+          });
+    };
 }
 
 const mapStateToProps = (state) => {
@@ -92,47 +101,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onFetchShoppingCar: () => dispatch(actionCreators.fetchShoppingCar()),
+        onBuyBooks: (books) => dispatch(actionCreators.buyBooks(books)),
+        onDeleteBooks: () => dispatch(actionCreators.deleteBooks()),
     };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCar);
 
-/*var shoppingCar = () => {
-    return (
-        <div>
-            <Navbar />
-            <img className='shoppingCar--photo' src={BackPhotoBooks}></img>
-            <div className="shoppingCar">
-                <div className='shoppingCar--header'>
-                    <h1 className='shoppingCar--title'>Shopping car</h1>
-                </div>
-                <div className='shoppingCar--items'>
-                    <p className='shoppingCar--categoryImage'>.    </p>
-                    <h2 className='shoppingCar--categoryBook'>Book</h2>
-                    <h2 className='shoppingCar--categoryAction'>Action</h2>
-                    <h2 className='shoppingCar--category'>Price</h2>
-                    <p className='shoppingCar--categoryNull'>.    </p>
-                    {
-                        this.state.loans.map(item => (
-                            <ShoppingItem item={item}></ShoppingItem>
-                        ))
-                    }
-                    <div className='shoppingCar--subtotal'>
-                        <h3 className='shoppingCar--subtotalItems'>Subtotal (1 item):</h3>
-                        <h3 className='shoppingCar--subtotalPrice'>$200</h3>
-                        <br />
-                        <button className='shoppingCar--subtotalButton'>Accept</button>
-                    </div>
-                </div>
-                <div className='shoppingCar--resume'>
-                    <h2 className='shoppingCar--shoppingResume'>Shopping resume</h2>
-                    <h3 className='shoppingCar--resumeItems'>Total (2 items):</h3>
-                    <h3 className='shoppingCar--resumeTotal'>$200</h3>
-                    <button className='shoppingCar--resumeButton'>Accept</button>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-export default shoppingCar;*/

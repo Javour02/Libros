@@ -20,6 +20,18 @@ const submitLoan = (state, action) => {
   return updateObject(state, { loans: updatedLoans });
 };
 
+const buyBooks = (state, action) => {
+  const updatedChanges = [...state.changes];
+
+  updatedChanges.push(action.payload.books);
+
+  return updateObject(state, { changes: updatedChanges });
+};
+
+const deleteBooks = (state, action) => {
+  return updateObject(state, { changes: [] });
+};
+
 
 const fetchNotifications = (state, action) => {
   return updateObject(state, { notifications: action.payload.notifications });
@@ -61,6 +73,10 @@ const reducer = (state = initialState, action) => {
       return fetchShoppingCar(state, action);
     case actionTypes.SUBMIT_LOAN:
       return submitLoan(state, action);
+    case actionTypes.BUY_BOOKS:
+      return buyBooks(state, action);
+    case actionTypes.DELETE_BOOKS:
+      return deleteBooks(state, action);
     default:
       return state;
   }

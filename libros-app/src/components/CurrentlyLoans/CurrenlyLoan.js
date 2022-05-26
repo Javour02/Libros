@@ -11,7 +11,7 @@ var Loan = (props) => {
                 <h4 className="loanComponent--bookAuthor">{props.loan.bookAuthor}</h4>
                 <p className="loanComponent--bookInfo">Due date: {props.loan.dueDate}</p>
                 <p className="loanComponent--bookInfo">Price per month: ${props.loan.pricePerMonth}</p>
-                <button className="loanComponent--button" onClick={(event) => props.submitLoan(props.loan.bookName)}>Already return this book</button>
+                <button className="loanComponent--button"  onClick={(event) => props.submitLoan(props.loan.bookName)}>Already return this book</button>
                 <br></br><br></br><br></br>
             </div>
         </div>

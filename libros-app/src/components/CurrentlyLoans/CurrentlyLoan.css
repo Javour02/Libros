@@ -45,6 +45,7 @@
     text-align: center;
     font-family: Stempel Schneidler Std ;
     font-weight: lighter;
+    display: none;
 }
 
 .loanComponent--button:hover{

@@ -118,6 +118,7 @@ class App extends Component {
 
   addLoan = (newLoanInfo) => {
     this.props.onAddLoan(newLoanInfo);
+    alert("Added to car succesfully");
   };
 
 }

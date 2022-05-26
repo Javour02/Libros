@@ -103,6 +103,7 @@
     transition: 0.3s;
     width: 30%;
     height: 30px;
+    display: none;
 }
 
 .specificView--bookAverageRating{

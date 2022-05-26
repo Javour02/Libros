@@ -50,6 +50,7 @@
     border: transparent;
     cursor: pointer;
     color: #C4391D;
+    display: none;
 }
 
 .shoppingItem--bookName{

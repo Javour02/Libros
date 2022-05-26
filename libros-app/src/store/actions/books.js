@@ -74,7 +74,7 @@ export const fetchChanges = () => {
       .then((response) => {
         console.log(response);
 
-        const changes= Object.values(response.data).map((change) => {
+        const changes = Object.values(response.data).map((change) => {
           return { ...change };
         });
 
@@ -133,7 +133,7 @@ export const fetchBooks = () => {
         console.log(response);
 
         const books = Object.values(response.data).map((book) => {
-          
+
           return { ...book };
         });
         console.log(books);
@@ -214,10 +214,61 @@ export const fetchShoppingCar = () => {
         console.log(response);
 
         const shoppingCar = Object.values(response.data).map((item) => {
-          
+
           return { ...item };
         });
         dispatch(loadShoppingCar(shoppingCar));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
+
+
+const storeChanges = (book) => {
+  return {
+    type: actionTypes.BUY_BOOKS,
+    payload: {
+      book: book,
+    },
+  };
+};
+
+export const buyBooks = (books) => {
+  return (dispatch) => {
+    books.map(book => (
+      axios
+        .post("/changes.json", book)
+        .then((response) => {
+          console.log(response);
+
+          dispatch(storeChanges(book));
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    ))
+  };
+};
+
+const storeShoppingCar = () => {
+  return {
+    type: actionTypes.DELETE_BOOKS,
+    payload: {
+      shoppingCar: [],
+    },
+  };
+};
+
+export const deleteBooks = () => {
+  return (dispatch) => {
+    axios
+      .delete("/shoppingCar.json")
+      .then((response) => {
+        console.log(response);
+        dispatch(storeShoppingCar());
+
       })
       .catch((error) => {
         console.log(error);

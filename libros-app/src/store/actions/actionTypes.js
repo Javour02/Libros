@@ -11,5 +11,7 @@ export const FETCH_BOOKS = "FETCH_BOOKS";
 export const FETCH_SHOPPINGCAR = "FETCH_SHOPPINGCAR";
 export const SUBMIT_LOAN = "SUBMIT_LOAN";
 export const ADD_LOAN = "ADD_LOAN";
+export const BUY_BOOKS = "BUY_BOOKS";
+export const DELETE_BOOKS = "BUY_BOOKS";
 
 export const RETURN_BOOKS = "RETURN_BOOKS";
