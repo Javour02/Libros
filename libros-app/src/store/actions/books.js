@@ -145,31 +145,28 @@ export const fetchBooks = () => {
   };
 };
 
-const storeReturns = (returns) => {
+const submitLoans = (returns) => {
   return {
-    type: actionTypes.RETURN_BOOKS,
+    type: actionTypes.SUBMIT_LOAN,
     payload: {
       returns: returns,
     },
   };
 };
 
-export const returnBooks = (returns) => {
+export const submitLoan = (returns) => {
   return (dispatch) => {
 
-    /*axios
-      .re("/loans.json", post)
+    axios
+      .delete("/loans/0.json")
       .then((response) => {
         console.log(response);
 
-        dispatch(storePost(post));
-        dispatch(endPostsLoading());
+        dispatch(submitLoans(returns));
       })
       .catch((error) => {
         console.log(error);
-
-        dispatch(endPostsLoading());
-      });*/
+      });
   };
 };
 

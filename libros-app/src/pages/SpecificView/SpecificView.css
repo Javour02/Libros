@@ -15,6 +15,32 @@
     text-align: center;
 }
 
+.specificView--bookReview{
+    margin: 30px;
+    margin-left: 350px;
+    display: block;
+}
+
+.specificView--bookReviewSubmit{
+    margin: 0px;
+    border-radius: 20px;
+    background-color: #381302;
+    color: #F8EBCC;
+    border-color: transparent;
+    align-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 10%;
+    height: 30px;
+}
+
+.specificView--bookReviewContent{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: none;
+}
+
 .specificView--bookPhoto {
     width: 40%;
     padding: 0vw 1vw;
@@ -86,6 +112,10 @@
 }
 
 .specificView--bookWriteReview:hover{
+    background-color: #75420E;
+}
+
+.specificView--bookReviewSubmit:hover{
     background-color: #75420E;
 }
 

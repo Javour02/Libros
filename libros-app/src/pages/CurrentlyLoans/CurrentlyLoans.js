@@ -46,7 +46,7 @@ class CurrentlyLoans extends Component {
                     <div className="loan--loans">
                         {
                             this.state.loans.map(loan => (
-                                <Loan loan={loan}></Loan>
+                                <Loan loan={loan} submitLoan={this.submitLoan}></Loan>
                             ))
                         }
                     </div>
@@ -54,6 +54,12 @@ class CurrentlyLoans extends Component {
             </div>
         );
     }
+
+    submitLoan = (book) => {
+        let loan = this.state.loans.filter(loan => loan.bookName == book);
+        console.log(loan);
+        this.props.onSubmitLoan(loan);
+    };
 }
 
 const mapStateToProps = (state) => {
@@ -67,6 +73,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        onSubmitLoan: (loan) => dispatch(actionCreators.submitLoan(loan)),
         onFetchLoans: () => dispatch(actionCreators.fetchLoans()),
     };
 };

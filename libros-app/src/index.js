@@ -13,6 +13,7 @@ import loansReducer from "./store/reducers/books";
 import myLoansReducer from "./store/reducers/books";
 import booksReducer from "./store/reducers/books";
 import shoppingCarReducer from "./store/reducers/books";
+import submitLoanReducer from "./store/reducers/books";
 
 const rootReducer = combineReducers({
   authenticationStore: authenticationReducer,
@@ -21,8 +22,8 @@ const rootReducer = combineReducers({
   changesStore: changesReducer,
   myLoansStore: myLoansReducer,
   booksStore: booksReducer,
-  loansStore: loansReducer,
   shoppingCarStore: shoppingCarReducer,
+  submitLoanStore: submitLoanReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

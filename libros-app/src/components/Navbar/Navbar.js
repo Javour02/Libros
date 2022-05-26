@@ -16,7 +16,7 @@ class Navbar extends Component {
             <Link to="/MainMenu"><img className='navbar--logo' src={logo} /></Link>
             <input className='navbar--searchbar' type="search"></input>
             <div className='navbar--divButtons'>
-                <Link to="/ShoppingCar">
+                <Link to="/MyBooks">
                     <img className="navbar--imageButton" src={mensajes} />
                 </Link>
                 <Link to="/ShoppingCar">

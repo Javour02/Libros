@@ -12,7 +12,7 @@ const initialState = {
 };
 
 
-const returnBooks = (state, action) => {
+const submitLoan = (state, action) => {
   const updatedLoans = [...state.loans];
 
   updatedLoans.push(action.payload.loan);
@@ -59,6 +59,8 @@ const reducer = (state = initialState, action) => {
       return fetchBooks(state, action);
     case actionTypes.FETCH_SHOPPINGCAR:
       return fetchShoppingCar(state, action);
+    case actionTypes.SUBMIT_LOAN:
+      return submitLoan(state, action);
     default:
       return state;
   }

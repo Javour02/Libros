@@ -94,8 +94,8 @@ class App extends Component {
             element={<MyLoansPage />}
           />
           <Route
-            path="/Payment"
-            element={<PaymentPage />}
+            path="/MyBooks"
+            element={<MyBooks />}
           />
           <Route
             path="/Exchange"
@@ -144,7 +144,6 @@ const mapDispatchToProps = (dispatch) => {
     onFetchNotifications: () => dispatch(actionCreators.fetchNotifications()),
     onFetchLoans: () => dispatch(actionCreators.fetchLoans()),
     onFetchChanges: () => dispatch(actionCreators.fetchChanges()),
-    onReturnBooks: (bookName) => dispatch(actionCreators.returnBooks(bookName)),
     onFetchBooks: () => dispatch(actionCreators.fetchBooks()),
     onAddLoan: (loan) => dispatch(actionCreators.addLoan(loan)),
 

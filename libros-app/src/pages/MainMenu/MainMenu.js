@@ -76,16 +76,16 @@ class MainMenu extends Component {
                             <Link to="/CurrentlyLoans" style={{ textDecoration: "none" }}><h2 className='main--text'>Currently Loans</h2></Link>
                             {
                                 this.state.loans.map(loan => (
-                                    <Loan loan={loan} submitReturn={this.submitReturn()}></Loan>
+                                    <Loan loan={loan} ></Loan>
                                 ))
                             }
                         </div>
 
                         <div className="main--changeBooks">
-                            <h2 className='main--text'>My books</h2>
+                            <Link to="/MyBooks" style={{ textDecoration: "none" }}><h2 className='main--text'>My books</h2></Link>
                             {
-                                this.state.books.map(book => (
-                                    <ChangeBook change={book}></ChangeBook>
+                                this.state.changes.map(change => (
+                                    <ChangeBook change={change}></ChangeBook>
                                 ))
                             }
                         </div>
@@ -95,12 +95,6 @@ class MainMenu extends Component {
             </div>
         );
     }
-
-    submitReturn = (bookName) => {
-        //this.props.onReturnBook(bookName);
-    };
-
-    
 
     onUserLoggedOut() {
         return (
@@ -131,7 +125,6 @@ const mapDispatchToProps = (dispatch) => {
         onFetchNotifications: () => dispatch(actionCreators.fetchNotifications()),
         onFetchLoans: () => dispatch(actionCreators.fetchLoans()),
         onFetchChanges: () => dispatch(actionCreators.fetchChanges()),
-        onReturnBooks: (bookName) => dispatch(actionCreators.returnBooks(bookName)),
         onFetchBooks: () => dispatch(actionCreators.fetchBooks()),
     };
 };
