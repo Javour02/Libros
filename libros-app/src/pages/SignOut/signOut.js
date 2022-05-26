@@ -33,7 +33,9 @@ class SignOut extends Component {
                     <Link to="/">
                     <button onClick={this.signOutDefinitively()}>SI</button>
                     </Link>
+                    <Link to="/MainMenu">
                     <button>NO</button>
+                    </Link>
                 </div>
             </div>
         );
