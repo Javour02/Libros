@@ -8,13 +8,14 @@ import usuario from '../../Images/User.png';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import * as actionCreators from "../../store/actions/";
-
+import SearchBar from "../SearchBar/SearchBar";
+import Bookdata from "../../dbTest.json";
 class Navbar extends Component {
     render (){
         return (
             <div className='navbar'>
             <Link to="/MainMenu"><img className='navbar--logo' src={logo} /></Link>
-            <input className='navbar--searchbar' type="search"></input>
+            <SearchBar placeholder="Enter a book name!" data={Bookdata}/>
             <div className='navbar--divButtons'>
                 <Link to="/ShoppingCar">
                     <img className="navbar--imageButton" src={mensajes} />

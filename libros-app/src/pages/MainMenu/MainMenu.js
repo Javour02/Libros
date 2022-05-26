@@ -10,7 +10,8 @@ import Loan from '../../components/Loans/Loan';
 import ChangeBook from '../../components/ChangedBooks/ChangeBook';
 import Navbar from '../../components/Navbar/Navbar';
 import BackPhotoBooks from '../../Images/BackPhotoBooks.png';
-
+import SearchBar from "../../components/SearchBar/SearchBar";
+import Bookdata from "../../dbTest.json";
 import './MainMenu.css';
 
 class MainMenu extends Component {
