@@ -3,8 +3,10 @@ import * as actionCreators from "../../store/actions/";
 import validator from "validator";
 import Navbar from '../../components/Navbar/Navbar';
 
+import { useHistory } from 'react-router';
 import { connect } from "react-redux";
 import './LogIn.css';
+import { Link } from 'react-router-dom';
 
 class LogIn extends Component {
     state = {
@@ -20,7 +22,7 @@ class LogIn extends Component {
 
     componentDidUpdate() {
         if (this.state.isUserLoggedIn) {
-            this.props.history.replace("/");
+            //this.props.history.replace("/MainMenu");
         }
     }
 
@@ -29,6 +31,7 @@ class LogIn extends Component {
             isUserLoggedIn: nextState.isUserLoggedIn,
         });
     }
+
     render() {
         return this.state.isUserLoggedIn
             ? this.onUserLoggedIn()
@@ -65,8 +68,16 @@ class LogIn extends Component {
                 <p className="logIn--message">don't have an account?</p>
                 <button className="logIn--button" onClick={this.submitSignUpForm}>Sign up</button>
                 {this.showErrorMessage()}
+                {this.showButtontoGo()}
             </div>
         );
+    }
+
+    showButtontoGo = ()=>{
+        if(this.props.isUserLoggedIn){
+            return <button><Link to="/MainMenu">Ir al Menu</Link></button>
+        }
+        
     }
 
     showErrorMessage(){
