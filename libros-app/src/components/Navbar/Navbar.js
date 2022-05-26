@@ -22,10 +22,8 @@ class Navbar extends Component {
                 <Link to="/ShoppingCar">
                     <img className="navbar--imageButton" src={notificaciones} />
                 </Link>
-                <button>
-                <img className="navbar--imageButton" src={usuario} onClick={this.props.onLogOut}/>
-
-                </button>               
+                <Link to="/ShoppingCar"><img className="navbar--imageButton" src={usuario} onClick={this.props.onLogOut}/></Link>
+                             
             </div>
         </div>
         );
