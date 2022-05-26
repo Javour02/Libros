@@ -1,0 +1,83 @@
+[
+        {
+            "id": 1,
+            "name": "Don Quijote de la Mancha",
+            "description": "Novela escrita por el español Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de las principales de la literatura universal.",
+            "author": "Miguel de Cervantes",
+            "image": "https://imagenes.elpais.com/resizer/RPQmu6paFxwmz1UySUD05dJVMbE=/1960x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/7BN7MROFVTFLCFQ2FXZPUC3Y3E.jpg",
+            "rating": 4.5
+        },
+        {
+            "id": 2,
+            "name": "Historia de 2 ciudades",
+            "description": "Novela del escritor británico Charles Dickens. Esta novela es particularmente distinta a las demás que escribió, las cuales se basan en su mayoría en historias protagonizadas por niños o adolescentes y muestran una intención de reprimenda o denuncia de la sociedad británica de la época. En esta novela histórica se narra la vida en el siglo XVIII, en la época de la Revolución francesa.",
+            "author": "Charles Dickens",
+            "image": "https://imagessl5.casadellibro.com/a/l/t7/85/9788484287285.jpg",
+            "rating": 4.6
+        },
+        {
+            "id": 3,
+            "name": "El señor de los anillos",
+            "description": "Su historia se desarrolla en la Tercera Edad del Sol de la Tierra Media, un lugar ficticio poblado por hombres y otras razas antropomorfas como los hobbits, los elfos o los enanos, así como por muchas otras criaturas reales y fantásticas. La novela narra el viaje del protagonista principal, Frodo Bolsón, hobbit de la Comarca, para destruir el Anillo Único y la consiguiente guerra que provocará el enemigo para recuperarlo, ya que es la principal fuente de poder de su creador, el Señor oscuro Sauron.",
+            "author": "J. R. R. Tolkien",
+            "image": "https://www.librosdemario.com/covers/86/67/cover.jpg",
+            "rating": 4.3
+        },
+        {
+            "id": 4,
+            "name": "El principito",
+            "description": "El principito es un cuento poético que viene acompañado de ilustraciones hechas con acuarelas por el mismo Saint-Exupéry. ​ En él, un piloto se encuentra perdido en el desierto del Sahara después de que su avión sufriera una avería, pero para su sorpresa, es allí donde conoce a un pequeño príncipe proveniente de otro planeta. La historia tiene una temática filosófica, donde se incluyen críticas sociales dirigidas a la «extrañeza» con la que los adultos ven las cosas. Estas críticas a las cosas «importantes» y al mundo de los adultos van apareciendo en el libro a lo largo de la narración.",
+            "author": "Antoine de Saint-Exupéry",
+            "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/f4/bc/f4bc25288107cfebe6a9cbc1e245c00a.jpg",
+            "rating": 4.5
+        },
+        {
+            "id": 5,
+            "name": "Sueño en el pabellón rojo",
+            "description": "Obra escrita a mediados del siglo XVIII por Cao Xueqin (en chino: 曹雪芹) durante el reinado de la Dinastía Qing. Es considerada una de las obras maestras de la literatura de China y es una de las cuatro novelas clásicas chinas, y es generalmente reconocida como la cúspide de la narrativa china. La obra ha dado lugar al campo de la rojología.",
+            "author": "Cao Xueqin",
+            "image": "https://laflechanegra.files.wordpress.com/2014/10/cao-xueqin-suec3b1o-1.jpg",
+            "rating": 4.4
+        },
+        {
+            "id": 6,
+            "name": "Las aventuras de Alicia en el país de las maravillas",
+            "description": "Novela de fantasía escrita por el matemático, lógico, fotógrafo y escritor británico Charles Lutwidge Dodgson, bajo el seudónimo de Lewis Carroll, publicada en 1865. La historia cuenta cómo una niña llamada Alicia cae por un agujero, encontrándose en un mundo peculiar, poblado por humanos y criaturas antropomórficas. El libro juega con la lógica, dando a la novela gran popularidad tanto en niños como en adultos. Está considerada una de las mejores novelas del género del Sinsentido. Su narrativa y estructura, junto con sus personajes, han sido una gran influencia tanto en la cultura popular como en la literatura, sobre todo en el género fantástico.",
+            "author": "Lewis Carroll",
+            "image": "https://imagenes.elpais.com/resizer/wfwo1xsjDYX7nfICTIDEh9WvXnE=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/VULX57VE7CHNAWXJXFXH6J3JHA.jpg",
+            "rating": 4.8
+        },
+        {
+            "id": 7,
+            "name": "Y no quedó ninguno",
+            "description": "Diez negritos, o eventualmente, Y no quedó ninguno, ​ cuyo título original en inglés es Ten little niggers, es una novela policíaca de la escritora británica Agatha Christie, publicada originalmente en Reino Unido por Collins Crime Club el 6 de noviembre de 1939. El título, que hace referencia a una canción infantil, ​ fue cambiado a And Then There Were None en la primera edición de Estados Unidos, y el título de la canción de la novela fue cambiado a Ten Little Indians. ​ La novela cuenta la historia de diez personas implicadas en la muerte de otras personas en el pasado y que lograron escapar de la justicia, que son invitadas a pasar un fin de semana en una isla. Allí comienzan a ser asesinadas una a una de forma similar a la que se menciona en cada estrofa de la canción.",
+            "author": "Agatha Christie",
+            "image": "https://images.cdn1.buscalibre.com/fit-in/360x360/58/3b/583b512451a75dff24c6e2dfcffa705c.jpg",
+            "rating": 4.9
+        },
+        {
+            "id": 8,
+            "name": "Seis de cuervos",
+            "description": "Kaz Brekker, un genio del crimen que regenta un antro de juegos de azar y apuestas conocido como el Club Cuervo, debe reunir a un grupo de seis personas con las habilidades necesarias para entrar (y salir) de la Corte de Hielo, una fortaleza inexpugnable que mantiene bajo llave un secreto que podría dinamitar el equilibrio de poder en el mundo.wwEs probable que nadie sobreviva a esta misión, pero si quiere hacerse rico más allá de lo que alcanza su imaginación, Kaz va a tener que jugárselo todo a una sola carta. Y esa carta es un Seis de Cuervos.",
+            "author": "Leigh Bardugo",
+            "image": "https://www.editorialhidra.com/media/hidra/images/cover-118707.jpg",
+            "rating": 4.5
+        },
+        {
+            "id": 9,
+            "name": "El león, la bruja y el armario",
+            "description": "Es una novela fantástica infantil publicada por C. S. Lewis en 1950. Es el libro más conocido de la serie de siete libros llamada Las Crónicas de Narnia. Aunque en orden de publicación fue el primer libro de la serie escrito por el autor, es en realidad el segundo según la cronología interna, tras El sobrino del mago",
+            "author": "C. S. Lewis",
+            "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/8b/a3/8ba3d10865506076ad134865c5a5d97c.jpg",
+            "rating": 4.7
+        },
+        {
+            "id": 10,
+            "name": "El código Da Vinci",
+            "description": "Al combinar los géneros de suspenso detectivesco y esoterismo Nueva Era, con una teoría de conspiración relativa al Santo Grial y al papel de María Magdalena en el cristianismo, la novela espoleó el difundido interés (sobre todo en los Estados Unidos de América) por ciertas teorías de complots «urdidos en la sombra por poderes ocultos», un fenómeno definido por Brown como el «auge conspiracionista».",
+            "author": "Dan Brown",
+            "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/d2/74/d2745514f8ea4de663d5c8c659a162b2.jpg",
+            "rating": 4.6
+        }
+        
+    ]
