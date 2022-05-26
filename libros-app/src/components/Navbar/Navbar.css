@@ -34,4 +34,5 @@
     height: 35%;
     align-items: center;
     border-radius: 5px;
+    visibility: hidden;
 }
