@@ -13,6 +13,8 @@ import LoansPage from './pages/CurrentlyLoans/CurrentlyLoans';
 import MyLoansPage from './pages/MyLoans/MyLoans';
 import NotFound from "./pages/NotFound/NotFound";
 import ShoppingCar from "./pages/ShoppingCar/ShoppingCar";
+import SignOut from "./pages/SignOut/signOut";
+
 
 import './App.css';
 
@@ -123,6 +125,11 @@ class App extends Component {
           <Route
             path="/MainMenu"
             element={<MainMenu data={this.state} />}
+            exact
+          />
+          <Route
+            path="/signOut"
+            element={<SignOut />}
             exact
           />
           <Route

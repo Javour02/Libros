@@ -3,6 +3,7 @@ import mensajes from '../../Images/BooksIcon.png';
 import notificaciones from '../../Images/ShoppingCar.png';
 import logo from '../../Images/Logo.png';
 import usuario from '../../Images/User.png';
+import signOut from '../../Images/cerrar-sesion.png';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -20,7 +21,10 @@ var navbar = () => {
                 </Link>
                 <Link to="/ShoppingCar">
                     <img className="navbar--imageButton" src={usuario} />
-                    </Link>
+                </Link>
+                <Link to="/SignOut">
+                    <img className="navbar--imageButton" src={signOut} />
+                </Link>
             </div>
         </div>
     );
